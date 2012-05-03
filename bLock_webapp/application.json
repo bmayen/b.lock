@@ -15,16 +15,33 @@
                 }
             },
 
-            "index": {
+            "rider": {
                 "base": "_frame",
                 "config": {
                     "title": "B.lock",
                     "child": {
-                        "type": "Index",
+                        "type": "Rider",
                         "config": {
                             "assets": {
                                 "top": {
-                                    "css": ["/static/Index/assets/index.css"]
+                                    "css": ["/static/Rider/assets/index.css"]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+
+		    "lender": {
+                "base": "_frame",
+                "config": {
+                    "title": "B.lock",
+                    "child": {
+                        "type": "Lender",
+                        "config": {
+                            "assets": {
+                                "top": {
+                                    "css": ["/static/Lender/assets/index.css"]
                                 }
                             }
                         }

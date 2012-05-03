@@ -34,14 +34,31 @@ YUI.add('Rider', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.assets.addCss('./index.css');
+                ac.done({
+                    status: 'Mojito is working.',
+                    data: data
+                });
+            });
+        },
+
+	    /**
+         * Method corresponding to the 'bike profile' action.
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        bikeProfile: function(ac) {
+            ac.models.RiderModelFoo.getData(function(err, data) {
+                if (err) {
+                    ac.error(err);
+                    return;
+                }
                 ac.done({
                     status: 'Mojito is working.',
                     data: data
                 });
             });
         }
-
     };
 
 }, '0.0.1', {requires: ['mojito', 'RiderModelFoo']});
