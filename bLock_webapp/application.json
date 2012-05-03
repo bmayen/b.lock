@@ -1,7 +1,40 @@
 [
     {
         "settings": [ "master" ],
-        "specs": {}
+	    "specs": {
+            "_frame": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "assets": {
+                        "top": {
+                            "blob": ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"],
+                            "css": ["/static/Frame/assets/reset.css"]
+                        }
+                    }
+                }
+            },
+
+            "shelf": {
+                "base": "_frame",
+                "config": {
+                    "title": "NewsBoxes",
+                    "child": {
+                        "type": "Shelf",
+                        "config": {
+                            "children": {
+                                "weather": {"type": "Weather"}
+                            },
+                            "assets": {
+                                "top": {
+                                    "css": ["/static/Shelf/assets/shelf.css"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+	    }
     },
     {
         "settings": [ "environment:development" ],
