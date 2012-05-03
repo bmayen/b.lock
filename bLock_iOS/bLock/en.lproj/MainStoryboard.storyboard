@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="I26-E1-YgT">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - start-->
+        <scene sceneID="BcY-wc-Jf8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlV-44-zuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="RVV-JE-JuR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sO4-JP-3Yb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="filters-bg.png" id="DaL-Oy-8I6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JbW-Fc-dnT">
+                                <rect key="frame" x="20" y="249" width="280" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="LENDER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fyx-d7-ade">
+                                <rect key="frame" x="20" y="203" width="280" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
+                                <state key="normal" title="RIDER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fk6-jv-It0" kind="push" id="RrQ-Er-FhD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="start" id="G7a-xb-y1P"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="574" y="-209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="egs-dV-Yfz">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnD-hk-gAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="I26-E1-YgT" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="CKj-oa-Gdn">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RVV-JE-JuR" kind="relationship" relationship="rootViewController" id="IGT-Q6-WJ8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="155" y="-632"/>
+        </scene>
+        <!--Unlock Map View Controller - unlock-->
+        <scene sceneID="czb-Hj-E3Y">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7t-WD-vfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="fk6-jv-It0" customClass="BLKUnlockMapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rl7-PB-spd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="filters-bg.png" id="MIo-fm-jl1">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="filter-divider.png" id="vZw-FO-AO1">
+                                <rect key="frame" x="5" y="305" width="310" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.25" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vh4-xw-olu">
+                                <rect key="frame" x="40" y="314" width="177" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="36"/>
+                                <state key="normal" title="un.lock">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="bD3-bg-Z90">
+                                <rect key="frame" x="200" y="326" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="off"/>
+                                    <segment title="on"/>
+                                </segments>
+                                <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="BQb-TE-c6F" kind="push" id="azi-Kl-7WS"/>
+                                </connections>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="exR-BP-K1g">
+                                <rect key="frame" x="20" y="38" width="280" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="unlock" id="fAW-KZ-rS0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1027" y="-209"/>
+        </scene>
+        <!--Time Left View Controller-->
+        <scene sceneID="9Zs-N9-XcL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acC-pQ-oHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="BQb-TE-c6F" customClass="BLKTimeLeftViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v2H-pz-Kd3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="filters-bg.png" id="xHj-Ap-VSh">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="01:02:45" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="13" id="wLr-2u-JYx">
+                                <rect key="frame" x="20" y="62" width="274" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DBLCDTempBlack" family="DB LCD Temp" pointSize="66"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.75" green="0.36422631048387094" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" red="0.75" green="0.36422631049999998" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="-1" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y93-1v-bFJ"/>
+                    <connections>
+                        <outlet property="timeDisplay" destination="wLr-2u-JYx" id="uyI-2y-KZ9"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1461" y="-203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filter-divider.png" width="310" height="1"/>
+        <image name="filters-bg.png" width="320" height="480"/>
+    </resources>
+    <classes>
+        <class className="BLKTimeLeftViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKTimeLeftViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="timeDisplay" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BLKUnlockMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKUnlockMapViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
