@@ -1,6 +1,7 @@
 [
     {
         "settings": [ "master" ],
+	    "cacheViewTemplates": false,
 	    "specs": {
             "_frame": {
                 "type": "HTMLFrameMojit",
@@ -26,6 +27,9 @@
                                 "top": {
                                     "css": ["/static/Rider/assets/index.css"]
                                 }
+                            },
+	                        "children": {
+                                "topNav": {"type": "TopNav"}
                             }
                         }
                     }
@@ -43,6 +47,9 @@
                                 "top": {
                                     "css": ["/static/Lender/assets/index.css"]
                                 }
+                            },
+                            "children": {
+                                "topNav": {"type": "TopNav"}
                             }
                         }
                     }

@@ -34,9 +34,8 @@ YUI.add('Rider', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
-                    status: 'Rider Index',
-                    data: data
+                ac.composite.done({
+                    template: {testData: 'test data'}
                 });
             });
         },
