@@ -9,25 +9,22 @@
                     "assets": {
                         "top": {
                             "blob": ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"],
-                            "css": ["/static/Frame/assets/reset.css"]
+                            "css": ["/static/Frame/assets/reset.css", "/static/Frame/assets/reset.css"]
                         }
                     }
                 }
             },
 
-            "shelf": {
+            "index": {
                 "base": "_frame",
                 "config": {
-                    "title": "NewsBoxes",
+                    "title": "B.lock",
                     "child": {
-                        "type": "Shelf",
+                        "type": "Index",
                         "config": {
-                            "children": {
-                                "weather": {"type": "Weather"}
-                            },
                             "assets": {
                                 "top": {
-                                    "css": ["/static/Shelf/assets/shelf.css"]
+                                    "css": ["/static/Index/assets/index.css"]
                                 }
                             }
                         }
@@ -37,7 +34,6 @@
 	    }
     },
     {
-        "settings": [ "environment:development" ],
         "staticHandling": {
             "forceUpdate": true
         }
