@@ -4,3 +4,5 @@ artifacts
 .*.swp
 *~
 .svn
+*.iml
+*.idea
