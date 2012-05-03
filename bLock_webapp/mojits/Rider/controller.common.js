@@ -45,7 +45,7 @@ YUI.add('Rider', function(Y, NAME) {
                     status: 'Rider Index',
                     data: data
                 });
-	            
+
 
             });
         },
