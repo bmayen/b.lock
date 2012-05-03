@@ -19,6 +19,12 @@
       "call": "rider.bikeProfile"
     },
 
+    "rider bikeReviews": {
+      "verbs": ["get"],
+      "path": "/rider/bike-reviews",
+      "call": "rider.bikeReviews"
+    },
+
 	"lender index": {
       "verbs": ["get"],
       "path": "/lender",

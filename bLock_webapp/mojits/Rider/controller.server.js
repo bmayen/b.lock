@@ -35,7 +35,7 @@ YUI.add('Rider', function(Y, NAME) {
                     return;
                 }
                 ac.done({
-                    status: 'Mojito is working.',
+                    status: 'Rider Index',
                     data: data
                 });
             });
@@ -54,7 +54,26 @@ YUI.add('Rider', function(Y, NAME) {
                     return;
                 }
                 ac.done({
-                    status: 'Mojito is working.',
+                    status: 'Bike Profile',
+                    data: data
+                });
+            });
+        },
+
+	    /**
+         * Method corresponding to the 'bike profile' action.
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        bikeReviews: function(ac) {
+            ac.models.RiderModelFoo.getData(function(err, data) {
+                if (err) {
+                    ac.error(err);
+                    return;
+                }
+                ac.done({
+                    status: 'Bike Reviews',
                     data: data
                 });
             });
