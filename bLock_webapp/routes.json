@@ -13,6 +13,12 @@
       "call": "rider.index"
     },
 
+	"rider index_default2": {
+      "verbs": ["get"],
+      "path": "/rider/index",
+      "call": "rider.index"
+    },
+
 	"rider bikeProfile": {
       "verbs": ["get"],
       "path": "/rider/bike-profile",
