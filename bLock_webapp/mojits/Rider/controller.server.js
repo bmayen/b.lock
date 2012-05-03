@@ -34,9 +34,19 @@ YUI.add('Rider', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
+
+	            ac.params.body.testData = 'test data';
+
+	            //ac.instance.config.children.topNav.config.testData = 'test Data';
+
+	            console.log('*********', ac.instance.config.children.topNav);
+
                 ac.composite.done({
-                    template: {testData: 'test data'}
+                    status: 'Rider Index',
+                    data: data
                 });
+	            
+
             });
         },
 

@@ -2,12 +2,12 @@
  * Copyright (c) 2012 Yahoo! Inc. All rights reserved.
  */
 /*jslint anon:true, sloppy:true, nomen:true*/
-YUI.add('TopNav', function(Y, NAME) {
+YUI.add('RiderMap', function(Y, NAME) {
 
 /**
- * The TopNav module.
+ * The RiderMap module.
  *
- * @module TopNav
+ * @module RiderMap
  */
 
     /**
@@ -29,17 +29,14 @@ YUI.add('TopNav', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-	        var self = this;
-
-            ac.models.TopNavModelFoo.getData(function(err, data) {
+            ac.models.RiderMapModelFoo.getData(function(err, data) {
                 if (err) {
                     ac.error(err);
                     return;
                 }
                 ac.assets.addCss('./index.css');
-	            console.log(ac.params);
                 ac.done({
-                    testData: ac.params.body.testData,
+                    status: 'Mojito is working.',
                     data: data
                 });
             });
@@ -47,4 +44,4 @@ YUI.add('TopNav', function(Y, NAME) {
 
     };
 
-}, '0.0.1', {requires: ['mojito', 'TopNavModelFoo']});
+}, '0.0.1', {requires: ['mojito', 'RiderMapModelFoo']});
