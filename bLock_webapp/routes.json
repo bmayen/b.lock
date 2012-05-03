@@ -1,0 +1,51 @@
+[{
+    "settings": [ "master" ],
+
+	"rider index": {
+      "verbs": ["get"],
+      "path": "/",
+      "call": "rider.index"
+    },
+
+	"rider index_default": {
+      "verbs": ["get"],
+      "path": "/rider",
+      "call": "rider.index"
+    },
+
+	"rider index_default2": {
+      "verbs": ["get"],
+      "path": "/rider/index",
+      "call": "rider.index"
+    },
+
+	"rider bikeProfile": {
+      "verbs": ["get"],
+      "path": "/rider/bike-profile",
+      "call": "rider.bikeProfile"
+    },
+
+    "rider bikeReviews": {
+      "verbs": ["get"],
+      "path": "/rider/bike-reviews",
+      "call": "rider.bikeReviews"
+    },
+
+	"lender index": {
+      "verbs": ["get"],
+      "path": "/lender",
+      "call": "lender.index"
+    },
+
+	"lender index_default": {
+      "verbs": ["get"],
+      "path": "/lender/index",
+      "call": "lender.index"
+    },
+
+	"lender bikeStats": {
+      "verbs": ["get"],
+      "path": "/lender/bike-stats",
+      "call": "lender.bikeStats"
+    }
+}]

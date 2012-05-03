@@ -1,0 +1,58 @@
+[
+    {
+        "settings": [ "master" ],
+	    "specs": {
+            "_frame": {
+                "type": "HTMLFrameMojit",
+                "config": {
+                    "deploy": true,
+                    "assets": {
+                        "top": {
+                            "blob": ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"],
+                            "css": ["/static/Frame/assets/reset.css", "/static/Frame/assets/reset.css"]
+                        }
+                    }
+                }
+            },
+
+            "rider": {
+                "base": "_frame",
+                "config": {
+                    "title": "B.lock",
+                    "child": {
+                        "type": "Rider",
+                        "config": {
+                            "assets": {
+                                "top": {
+                                    "css": ["/static/Rider/assets/index.css"]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+
+		    "lender": {
+                "base": "_frame",
+                "config": {
+                    "title": "B.lock",
+                    "child": {
+                        "type": "Lender",
+                        "config": {
+                            "assets": {
+                                "top": {
+                                    "css": ["/static/Lender/assets/index.css"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+	    }
+    },
+    {
+        "staticHandling": {
+            "forceUpdate": true
+        }
+    }
+]
