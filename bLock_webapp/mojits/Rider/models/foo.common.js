@@ -110,18 +110,25 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
         * Fake singleton
         */
         initializedIfNotSet: function() {
-            if( !global.lockIterator ) {
-                global.lockIterator = 0;
+            if( !this.getGlobal().lockIterator ) {
+                this.getGlobal().lockIterator = 0;
             }
 
-	        if( !global.db ) {
+	        if( !this.getGlobal().db ) {
                 this.initDb();
             }
 
         },
 
+        /**
+        * Simple wrapper to get global in node and browser
+        */
+        getGlobal: function() {
+            return ( typeof window !== 'undefined' ) ? window : global;
+        },
+
 	    initDb: function() {
-		    global.db = [{
+           this.getGlobal().db = [{
                 'name': {
                     first: 'brett',
                     last: 'mayen',
