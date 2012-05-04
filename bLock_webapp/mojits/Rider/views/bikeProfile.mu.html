@@ -1,11 +1,14 @@
-<div id="{{mojit_view_id}}">
-	<img src="/static/Rider/assets/03.jpg" />
-    <dl>
-        <dt>status</dt>
-        <dd id="dd_status">{{status}}</dd>
-        <dt>data</dt>
-        <dd id="dd_data">
-            <b>some:</b> {{#data}}{{some}}{{/data}}
-        </dd>
-    </dl>
+<div id="{{mojit_view_id}}" class="{{ns_class}}">
+	{{{topNav}}}
+	{{{subNav}}}
+
+	<img src="/static/bLock_webapp/assets/bike_profile.png" class='bike-profile' />
+
+	<div class="reserve">
+		<b>RESERVE FOR: </b> Tuesday May 08, 2012 | 1:00pm – 5:00pm | Roundtrip
+		<a href="#" class='reserve-btn'></a>
+	</div>
+
+	<img src="/static/bLock_webapp/assets/review_list.png" class='review-list' />
+
 </div>

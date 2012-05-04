@@ -56,6 +56,18 @@ YUI.add('Lender', function(Y, NAME) {
 	                template: {ns_class: "lender bike-stats"}
                 });
             });
+        },
+
+	    bikeRegister: function(ac) {
+            ac.models.LenderModelFoo.getData(function(err, data) {
+                if (err) {
+                    ac.error(err);
+                    return;
+                }
+                ac.composite.done({
+                    template: {ns_class: "lender bike-register"}
+                });
+            });
         }
     };
 

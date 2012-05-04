@@ -23,15 +23,35 @@ YUI.add('Rider', function(Y, NAME) {
         },
 
 	    initMap: function() {
-            var myOptions = {
-                center: new google.maps.LatLng(-34.397, 150.644),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+            var self = this,
+	            myOptions = {
+	                center: new google.maps.LatLng(-34.397, 150.644),
+	                zoom: 8,
+	                mapTypeId: google.maps.MapTypeId.ROADMAP
+	            };
 
-            console.log(Y.one('.map'));
+		    //this.models.RiderModelFoo.getBikes(function(err, bikes) {
+			    self.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
 
-            this.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
+                var bounds = new google.maps.LatLngBounds(), //  Create a new viewpoint bound
+                    coords, marker, markerIdx, i;
+
+                for (i = 0; i < events.length; ++i) {
+                    coords = new google.maps.LatLng(event.data("lat"), event.data("lng"));
+                    marker = new google.maps.Marker({
+                        position: coords,
+                        map: self.map
+                    });
+
+                    //  And increase the bounds to take this point
+                    bounds.extend(coords);
+                }
+
+                //  Fit these bounds to the map
+                self.map.fitBounds(bounds);
+		    //});
+
+
         }
     };
 

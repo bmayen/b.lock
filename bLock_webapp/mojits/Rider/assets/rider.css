@@ -6,8 +6,6 @@
 
 
 /** index **/
-.rider.index .sub-nav {}
-
 .rider.index aside {
 	float: left;
 	clear: both;
@@ -96,14 +94,34 @@
 .rider.index .results table .rating {
 	width: 205px;
 }
-
+.rider.index .results table td.rating {
+	color: red;
+}
 .rider.index .results table .indicator {
 	width: 40px;
 }
 
-/** bike-profile **/
-.rider.bike-profile .sub-nav {}
+.rider.index .results table .indicator img {
+	position: relative;
+	top: 15px;
+	right: 15px;
+}
 
+/** bike-profile **/
+.rider.bike-profile .reserve {
+	padding: 10px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	background: rgba(0,0,0,.3);
+}
+
+.rider.bike-profile .reserve-btn {
+	background: url(/static/bLock_webapp/assets/reserve-btn.png) no-repeat;
+	width: 212px;
+	height: 44px;
+	display: block;
+	float: right;
+}
 
 /** bike-reviews **/
-.rider.bike-reviews .sub-nav {}

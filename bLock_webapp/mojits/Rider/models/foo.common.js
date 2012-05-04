@@ -149,6 +149,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 			bikes: [{
 				id: 0,
 				available: true,
+				trip_type: 'One Way',
 				unlock_code: '1eju2ewj45jfj3',
 				location: {
 					epicenter: {
@@ -165,6 +166,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 			},{
 				id: 1,
 				available: true,
+				trip_type: 'Round Trip',
 				unlock_code: '1eju2ewj45jfj3',
 				location: {
 					epicenter: {
@@ -181,6 +183,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 			},{
 				id: 2,
 				available: true,
+				trip_type: 'Round Trip',
 				unlock_code: '1eju2ewj45jfj3',
 				location: {
 					epicenter: {
@@ -197,6 +200,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 			},{
 				id: 3,
 				available: true,
+				trip_type: 'One Way',
 				unlock_code: '1eju2ewj45jfj3',
 				location: {
 					epicenter: {
