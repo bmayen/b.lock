@@ -45,7 +45,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
 		    this.initializedIfNotSet();
 
-		    Y.each(global.db, function(val) {
+		    Y.each(this.getGlobal().db, function(val) {
 			    Y.each(val.bikes, function(val) {
 				    console.log(val);
 	                bikes.push(val);

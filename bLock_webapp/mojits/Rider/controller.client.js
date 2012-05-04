@@ -34,10 +34,11 @@ YUI.add('Rider', function(Y, NAME) {
 			    self.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
 
                 var bounds = new google.maps.LatLngBounds(), //  Create a new viewpoint bound
-                    coords, marker, markerIdx, i;
+                    bike, coords, marker, markerIdx, i;
 
                 for (i = 0; i < bikes.length; ++i) {
-                    coords = new google.maps.LatLng(event.data("lat"), event.data("lng"));
+	                bike = bikes[i];
+                    coords = new google.maps.LatLng(bike.location.epicenter.lat, bike.location.epicenter.long);
                     marker = new google.maps.Marker({
                         position: coords,
                         map: self.map
