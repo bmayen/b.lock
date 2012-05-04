@@ -36,17 +36,21 @@ YUI.add('LenderModelFoo', function(Y, NAME) {
             var self = this,
                 bikes = [];
 
-		    console.log(global.db);
-
-            Y.each(global.db, function(val) {
+            Y.each(this.getGlobal().db, function(val) {
                 Y.each(val.bikes, function(val) {
-                    console.log(val);
                     bikes.push(val);
                 });
             });
 
             callback(null, bikes);
-	    }
+	    },
+
+	    /**
+        * Simple wrapper to get global in node and browser
+        */
+        getGlobal: function() {
+            return ( typeof window !== 'undefined' ) ? window : global;
+        }
 
     };
 
