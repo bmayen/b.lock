@@ -8,7 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BLKTimeLeftViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *timeDisplay;
+@interface BLKTimeLeftViewController : UIViewController {
+    NSTimer* timer_;
+    double timerInteraval_;
+    int timerCount_;
+    // 
+    double   timeLeft_;
+    double   initialAmountOfTime_;
+}
+@property(weak, nonatomic) IBOutlet UILabel *timeDisplay;
 
+@property(readonly, nonatomic) double timeLeft;
+@property(readonly, nonatomic) double initialAmountOfTime;
+
+// TIMER
+-(void)createTimer;
+-(void)starTimerWithInitialTimeOf:(double)anInitialAmountOfTime;
+-(void)onTick:(NSTimer *)aTimer;
+-(void)stop;
+-(void)pause;
+-(void)resume;
+- (IBAction)onBackButtonWasPressed:(id)sender;
+- (IBAction)onWantsToExtendRide:(id)sender;
+- (IBAction)onWantsToLockupBike:(id)sender;
 @end

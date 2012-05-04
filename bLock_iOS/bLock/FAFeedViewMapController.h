@@ -33,7 +33,7 @@
 @property(weak) id delegate;
 
 // Designated initalizer
-- (id)initWithFrame:(CGRect)frame;
+- (id)initWithMapView:(MKMapView*)aMapView;
 
 
 #pragma mark -
