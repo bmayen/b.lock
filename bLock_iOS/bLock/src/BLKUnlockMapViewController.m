@@ -47,7 +47,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
 
 //    self.unlockButton.enabled = false;
     self.navigationController.navigationBar.hidden = YES;

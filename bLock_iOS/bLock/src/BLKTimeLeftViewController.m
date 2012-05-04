@@ -9,14 +9,14 @@
 #import "BLKTimeLeftViewController.h"
 
 @interface BLKTimeLeftViewController ()
-
 @end
 
 @implementation BLKTimeLeftViewController
+@synthesize asiHttpRequest;
 @synthesize timeLeft, initialAmountOfTime;
 @synthesize timeDisplay;
 
-
+#define IP 192.168.43.144
 #pragma mark - TIMER
 -(void)starTimerWithInitialTimeOf:(double)anInitialAmountOfTime {
     timeLeft_ = initialAmountOfTime_ = anInitialAmountOfTime;
@@ -42,6 +42,23 @@
 
 - (IBAction)onWantsToExtendRide:(id)sender {
     timeLeft_ += 60 * 5;
+    
+    static int counter = 0;
+    NSString* urlString = NULL;
+    
+    // Toggle
+    if ( ++counter % 2 == 0 ) urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/true";
+    else urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/false";
+    
+    [self setAsiHttpRequest: [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]]];
+	[asiHttpRequest setUseKeychainPersistence: YES];
+	[asiHttpRequest setDelegate:self];
+    [asiHttpRequest setRequestMethod:@"GET"];
+	[asiHttpRequest setShouldPresentAuthenticationDialog:NO];
+	[asiHttpRequest setDidFinishSelector:@selector(requestFinished:)];
+	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
+    [asiHttpRequest setUseCookiePersistence:YES];
+    [asiHttpRequest startAsynchronous];
 }
 
 - (IBAction)onWantsToLockupBike:(id)sender {
@@ -83,9 +100,39 @@
     timeDisplay.text = ss;
 }
 
+#pragma mark ASIHTTPRequestDelegate
+- (void)requestFinished:(ASIHTTPRequest *)request {
+    
+    NSString *responseString = [request responseString];
+    
+    // Append cookies    
+    NSLog(@"Response StatusCode %i", asiHttpRequest.responseStatusCode);
+    NSLog(@"Response Cookies %@", asiHttpRequest.responseCookies);
+    NSLog(@"Response Headers %@", asiHttpRequest.responseHeaders);
+    NSLog(@"--------------------:");  
+    NSLog(@"%@", responseString);
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request {
+    NSError *error = [request error];
+    NSLog(@"Error %@", [error localizedDescription]);
+}
+
 - (void)viewDidLoad {
     // Custom initialization
     [super viewDidLoad];
+    
+    NSString* urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/false";
+
+    [self setAsiHttpRequest: [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]]];
+	[asiHttpRequest setUseKeychainPersistence: YES];
+	[asiHttpRequest setDelegate:self];
+    [asiHttpRequest setRequestMethod:@"GET"];
+	[asiHttpRequest setShouldPresentAuthenticationDialog:NO];
+	[asiHttpRequest setDidFinishSelector:@selector(requestFinished:)];
+	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
+    [asiHttpRequest setUseCookiePersistence:YES];
+    [asiHttpRequest startAsynchronous];
     
 	// Do any additional setup after loading the view.
     timerInteraval_ = 0.01;

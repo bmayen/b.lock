@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "ASIHTTPRequestDelegate.h"
 
 @interface BLKTimeLeftViewController : UIViewController {
     NSTimer* timer_;
@@ -16,6 +19,8 @@
     double   timeLeft_;
     double   initialAmountOfTime_;
 }
+
+@property(nonatomic, retain) ASIFormDataRequest* asiHttpRequest;
 @property(weak, nonatomic) IBOutlet UILabel *timeDisplay;
 
 @property(readonly, nonatomic) double timeLeft;
@@ -28,6 +33,7 @@
 -(void)stop;
 -(void)pause;
 -(void)resume;
+
 - (IBAction)onBackButtonWasPressed:(id)sender;
 - (IBAction)onWantsToExtendRide:(id)sender;
 - (IBAction)onWantsToLockupBike:(id)sender;
