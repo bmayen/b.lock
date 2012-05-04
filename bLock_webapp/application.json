@@ -10,7 +10,7 @@
                     "assets": {
                         "top": {
                             "blob": ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"],
-                            "css": ["/static/Frame/assets/reset.css", "/static/Frame/assets/reset.css"]
+                            "css": ["/static/Frame/assets/reset.css", "/static/Frame/assets/global.css"]
                         }
                     }
                 }
@@ -25,7 +25,7 @@
                         "config": {
                             "assets": {
                                 "top": {
-                                    "css": ["/static/Rider/assets/index.css"]
+                                    "css": ["/static/Rider/assets/rider.css"]
                                 }
                             },
 	                        "children": {
@@ -47,7 +47,7 @@
                         "config": {
                             "assets": {
                                 "top": {
-                                    "css": ["/static/Lender/assets/index.css"]
+                                    "css": ["/static/Lender/assets/lender.css"]
                                 }
                             },
                             "children": {

@@ -1,2 +1,31 @@
-dt { font-weight: bold; }
-.sel { background-color: #FF4; }
+.rider {}
+
+.rider.index {}
+
+.rider .top-nav {}
+
+
+/** index **/
+.rider.index .sub-nav {}
+
+.rider.index aside {
+	float: left;
+}
+
+.rider.index .map-view {
+	float: left;
+	width: 300px;
+	height: 300px;
+	background: black;
+}
+
+.rider.index .results {
+	clear: both;
+}
+
+/** bike-profile **/
+.rider.bike-profile .sub-nav {}
+
+
+/** bike-reviews **/
+.rider.bike-reviews .sub-nav {}
