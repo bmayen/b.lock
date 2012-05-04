@@ -55,7 +55,6 @@
 
 #pragma mark ASIHTTPRequestDelegate
 - (void)requestFinished:(ASIHTTPRequest *)request {
-    
     NSString *responseString = [request responseString];
     
     // Append cookies    

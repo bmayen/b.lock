@@ -20,6 +20,7 @@ YUI.add('Index', function(Y, NAME) {
 
         init: function(config) {
             this.config = config;
+            debugger;
         },
 
         /**

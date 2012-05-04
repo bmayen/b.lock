@@ -42,12 +42,16 @@
 
 - (IBAction)onWantsToExtendRide:(id)sender {
     timeLeft_ += 60 * 5;
+}
+
+- (IBAction)onWantsToLockupBike:(id)sender {
     
-    static int counter = 0;
-    NSString* urlString = NULL;
+    static bool isLocked = false;
+    isLocked = !isLocked;
     
     // Toggle
-    if ( ++counter % 2 == 0 ) urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/true";
+    NSString* urlString = NULL;
+    if ( isLocked ) urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/true";
     else urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/false";
     
     [self setAsiHttpRequest: [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]]];
@@ -59,9 +63,7 @@
 	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
     [asiHttpRequest setUseCookiePersistence:YES];
     [asiHttpRequest startAsynchronous];
-}
-
-- (IBAction)onWantsToLockupBike:(id)sender {
+    
 }
 
 -(void)createTimer {

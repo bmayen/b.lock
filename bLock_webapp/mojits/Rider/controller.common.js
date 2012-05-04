@@ -93,7 +93,7 @@ YUI.add('Rider', function(Y, NAME) {
             var self = this;
             id = ac.params.getFromRoute().id
             ac.models.RiderModelFoo.getLockValue( id, function( isLocked ) {
-                ac.done( isLocked == 0 ? "{1}" : "{0}"); 
+                ac.done( isLocked == 1 ? "{1}" : "{0}"); 
             });
         },
 
