@@ -25,32 +25,32 @@ YUI.add('Lender', function(Y, NAME) {
 	    initMap: function(ac) {
 		    var self = this,
                 myOptions = {
-                    center: new google.maps.LatLng(-34.397, 150.644),
+                    center: new google.maps.LatLng(40.71206913039633, -73.96425247192383),
                     zoom: 8,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
-            ac.models.LenderModelFoo.getBikes(function(err, bikes) {
-                self.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
+            self.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
 
-                var bounds = new google.maps.LatLngBounds(), //  Create a new viewpoint bound
-                    bike, coords, marker, markerIdx, i;
+		    /*
+            var bounds = new google.maps.LatLngBounds(), //  Create a new viewpoint bound
+                bike, coords, marker, markerIdx, i;
 
-                for (i = 0; i < bikes.length; ++i) {
-                    bike = bikes[i];
-                    coords = new google.maps.LatLng(bike.location.epicenter.lat, bike.location.epicenter.long);
-                    marker = new google.maps.Marker({
-                        position: coords,
-                        map: self.map
-                    });
+            for (i = 0; i < bikes.length; ++i) {
+                bike = bikes[i];
+                coords = new google.maps.LatLng(bike.location.epicenter.lat, bike.location.epicenter.long);
+                marker = new google.maps.Marker({
+                    position: coords,
+                    map: self.map
+                });
 
-                    //  And increase the bounds to take this point
-                    bounds.extend(coords);
-                }
+                //  And increase the bounds to take this point
+                bounds.extend(coords);
+            }
 
-                //  Fit these bounds to the map
-                self.map.fitBounds(bounds);
-           });
+            //  Fit these bounds to the map
+            self.map.fitBounds(bounds);
+            */
 	    }
     };
 

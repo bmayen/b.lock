@@ -94,7 +94,7 @@ body>div {
 .rider.bike-reviews li.reviews-nav a,
 .lender.index li.your-bikes-nav a,
 .lender.bike-register li.register-nav a,
-.lender.bike-stats li.stats-nav a {
+.lender.bike-stats li.your-bikes-nav a {
 	color: #6a6a6a;
 }
 

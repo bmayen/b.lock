@@ -156,7 +156,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                     last: 'mayen',
                     nickname: 'brettm'
                 },
-
+ 	            activeBikeId: 0,
                 bikes: [{
                     id: 0,
                     available: true,

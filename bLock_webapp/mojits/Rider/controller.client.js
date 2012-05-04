@@ -25,7 +25,7 @@ YUI.add('Rider', function(Y, NAME) {
 	    initMap: function(ac) {
             var self = this,
 	            myOptions = {
-	                center: new google.maps.LatLng(-34.397, 150.644),
+	                center: new google.maps.LatLng(40.71206913039633, -73.96425247192383),
 	                zoom: 8,
 	                mapTypeId: google.maps.MapTypeId.ROADMAP
 	            };
@@ -43,6 +43,8 @@ YUI.add('Rider', function(Y, NAME) {
                         position: coords,
                         map: self.map
                     });
+
+	                console.log(coords);
 
                     //  And increase the bounds to take this point
                     bounds.extend(coords);
