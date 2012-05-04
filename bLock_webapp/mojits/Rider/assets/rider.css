@@ -12,7 +12,9 @@
 }
 
 .rider.index .map-controls input,
-.rider.index .map-controls select {
+.rider.index .map-controls select,
+.rider.index .map-controls .roundtrip>div,
+.rider.index .map-controls .clear a {
 	color: #5a5a5a;
 	background: #151515;
 	border: 1px solid #222;
@@ -23,6 +25,15 @@
 
 .rider.index .map-controls select {
 	width: 248px;
+}
+
+.rider.index .map-controls .roundtrip>div input {
+	margin: 0 0 5px 10px;
+}
+
+.rider.index .map-controls .clear a {
+	display: block;
+	text-decoration: none;
 }
 
 .rider.index .map {
