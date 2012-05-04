@@ -98,9 +98,8 @@ YUI.add('Rider', function(Y, NAME) {
         getLockValue: function(ac) {
             var self = this;
             var id = ac.params.getFromRoute().id;
-            ac.models.RiderModelFoo.getLockValue( id, function( isLocked ) {
-                ac.done( isLocked == 1 ? "{1}" : "{0}"); 
-            });
+            var lockValue = ac.models.RiderModelFoo.getLockValue( id );
+            ac.done( lockValue ? "{1}" : "{0}" );
         },
 
         /**
@@ -127,6 +126,20 @@ YUI.add('Rider', function(Y, NAME) {
             var id = ac.params.getFromRoute().id;
             ac.models.RiderModelFoo.setLockValue( id, false );
             ac.done( 'false' );
+        },
+
+        /**
+         * Retrieve the status of a lock
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        getActiveBike: function(ac) {
+            var self = this;
+            var id = ac.params.getFromRoute().id;
+            ac.models.RiderModelFoo.getBike( id, function(){ 
+                ac.done( 'true' );
+            });
         },
 
 	    reserve: function(ac) {

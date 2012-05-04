@@ -37,6 +37,12 @@
       "call": "rider.bikeReviews"
     },
 
+  "rider getActiveBike": {
+      "verbs": ["get"],
+      "path": "/rider/:id/get-active-bike",
+      "call": "riderplain.getActiveBike"
+    },
+
   "rider getLockValue": {
     "verbs": ["get"],
     "path": "/rider/lock-value/get/:id",
