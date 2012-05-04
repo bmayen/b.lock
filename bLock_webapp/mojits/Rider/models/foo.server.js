@@ -37,8 +37,23 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             callback(null, { some: 'data' });
         },
 
-	    getMap: function(callback) {
-            callback(null, { some: 'data' });
+	    getBikes: function(callback) {
+		    var self = this;
+
+		    this.db.open(function (error, client) {
+                if (error) throw error;
+                var collection = new self.mongodb.Collection(client, 'test');
+
+                collection.find({}, {safe: true},
+                    function(err, object) {
+                        if (err) console.warn("**************", err.message);
+                        else {
+                            object.toArray(function(err, docs) {
+                                callback(null, docs);
+                            });
+                        }  // undefined if no matching object exists.
+                    });
+            });
         },
 
 	    testMongo: function(callback) {

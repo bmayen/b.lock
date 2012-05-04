@@ -4,25 +4,45 @@
 
 	<aside>
 		<ul class="map-controls">
-			<li><a href="#">Location</a></li>
-			<li><a href="#">Roundtrip?</a></li>
-			<li><a href="#">Duration</a></li>
-			<li><a href="#">Date</a></li>
-			<li><a href="#">Time</a></li>
-			<li><a href="#">Submit</a></li>
+			<li class="zip"><input type='text' placeholder="ZIP CODE"></li>
+			<li class="date"><input type='text' placeholder="Select a date"></li>
+			<li class="time"><select><option>Select a time</option></select></li>
+			<li class="duration"><select><option>Duration</option></select></li>
+			<li class="roundtrip"><input type='checkbox'></li>
+			<li class="clear"><a href="#">Clear</a></li>
 		</ul>
 	</aside>
 
 	{{{riderMap}}}
 
 	<section class="results">
-		<h2>Results</h2>
-		<table>
-			<tr>
-				<td><a href="#">Bike 1</a></td>
-				<td>Location</td>
-				<td>Rating</td>
-			</tr>
-		</table>
+		<h2>Available Bikes</h2>
+
+		<div class="results-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>BIKE ID</th>
+						<th>LOCATION</th>
+						<th>TRIP TYPE</th>
+						<th>RATING</th>
+						<th></th>
+					</tr>
+				</thead>
+			</table>
+			{{#bikes}}
+			<table>
+				<tr>
+					<td>0</td>
+					<td><a href="#">Bike {{id}}</a></td>
+					<td>Location</td>
+					<td>Rating</td>
+					<td>Rating</td>
+					<td></td>
+				</tr>
+			</table>
+			{{/bikes}}
+		</div>
 	</section>
 </div>
