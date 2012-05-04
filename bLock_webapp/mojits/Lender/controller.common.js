@@ -34,9 +34,8 @@ YUI.add('Lender', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
-                    status: 'Mojito is working.',
-                    data: data
+                ac.composite.done({
+	                template: {ns_class: "lender index"}
                 });
             });
         },
@@ -53,9 +52,8 @@ YUI.add('Lender', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
-                    status: 'Mojito is working.',
-                    data: data
+                ac.composite.done({
+	                template: {ns_class: "lender bike-stats"}
                 });
             });
         }

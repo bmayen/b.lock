@@ -36,15 +36,12 @@ YUI.add('TopNav', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.assets.addCss('./index.css');
-	            console.log(ac.params);
                 ac.done({
-                    testData: ac.params.body.testData,
+                    testData: ac.params.params.body.testData,
                     data: data
                 });
             });
         }
-
     };
 
 }, '0.0.1', {requires: ['mojito', 'TopNavModelFoo']});
