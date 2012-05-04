@@ -103,9 +103,10 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             callback( global.lockIterator % 2 == 0 );
         },
 
-        setLockValue: function( id, callback ) {
+        setLockValue: function( id, value ) {
+            // TODO: SET VALUE FOR REAL
             this.initializedIfNotSet();
-            callback( global.lockIterator % 2 == 0 );
+            // callback( global.lockIterator % 2 == 0 );
         },
 
         /**

@@ -33,8 +33,20 @@
 
   "rider getLockValue": {
     "verbs": ["get"],
-    "path": "/rider/lock-value/:id",
+    "path": "/rider/lock-value/get/:id",
     "call": "riderplain.getLockValue"
+  },
+
+  "rider setLockValueTrue": {
+    "verbs": ["get"],
+    "path": "/rider/lock-value/set/:id/true",
+    "call": "riderplain.setLockValueTrue"
+  },
+
+  "rider setLockValueFalse": {
+    "verbs": ["get"],
+    "path": "/rider/lock-value/set/:id/false",
+    "call": "riderplain.setLockValueFalse"
   },
 
 	"lender index": {

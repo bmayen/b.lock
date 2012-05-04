@@ -8,10 +8,14 @@
 
 #import "BLKUnlockMapViewController.h"
 
+
+
+
 @implementation BLKUnlockMapViewController
 @synthesize unlockButton;
 @synthesize mapview;
 @synthesize mapviewController;
+@synthesize asiHttpRequest;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,9 +47,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+
 //    self.unlockButton.enabled = false;
     self.navigationController.navigationBar.hidden = YES;
     [self setupMap];
+}
+
+#pragma mark ASIHTTPRequestDelegate
+- (void)requestFinished:(ASIHTTPRequest *)request {
+    
+    NSString *responseString = [request responseString];
+    
+    // Append cookies    
+    NSLog(@"Response StatusCode %i", asiHttpRequest.responseStatusCode);
+    NSLog(@"Response Cookies %@", asiHttpRequest.responseCookies);
+    NSLog(@"Response Headers %@", asiHttpRequest.responseHeaders);
+    NSLog(@"--------------------:");  
+    NSLog(@"%@", responseString);
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request {
+    NSError *error = [request error];
+    NSLog(@"Error %@", [error localizedDescription]);
 }
 
 - (IBAction)onBackButtonWasPressed:(id)sender {

@@ -108,6 +108,32 @@ YUI.add('Rider', function(Y, NAME) {
             });
         },
 
+        /**
+         * Retrieve the status of a lock
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        setLockValueTrue: function(ac) {
+            var self = this;
+            id = ac.params.getFromRoute().id;
+            ac.models.RiderModelFoo.setLockValue( id, true );
+            ac.done( 'true' );
+        },
+
+        /**
+         * Retrieve the status of a lock
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        setLockValueFalse: function(ac) {
+            var self = this;
+            id = ac.params.getFromRoute().id;
+            ac.models.RiderModelFoo.setLockValue( id, false );
+            ac.done( 'false' );
+        },
+
 	    /** HELPERS **/
 	    showMap: function(filters) {
 
