@@ -34,7 +34,7 @@
   "rider getLockValue": {
     "verbs": ["get"],
     "path": "/rider/lock-value/:id",
-    "call": "rider.getLockValue"
+    "call": "riderplain.getLockValue"
   },
 
 	"lender index": {

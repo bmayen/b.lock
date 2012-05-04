@@ -46,10 +46,10 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             this.db.open(function (error, client) {
                 if (error) throw error;
                 var collection = new self.mongodb.Collection(client, 'test');
-                debugger;
+                // debugger;
                 collection.find({}, {safe: true},
                     function(err, object) {
-                        debugger;
+                        // debugger;
                         if (err) console.warn("**************", err.message);
                         else {
                             object.toArray(function(err, docs) {
@@ -60,46 +60,26 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             });
 	    },
 
-        getBikeStatus: function(callback) {
-            var self = this;
+        getLockValue: function(id, callback) {
+            this.initializedIfNotSet();
 
-            this.db.open(function (error, client) {
-                if (error) throw error;
-                var collection = new self.mongodb.Collection(client, 'posts');
-            debugger;
-
-                collection.find({}, {safe: true},
-                    function(err, object) {
-                        if (err) console.warn("**************", err.message);
-                        else {
-                            object.toArray(function(err, docs) {
-                                callback(null, docs);
-                            });
-                        }  // undefined if no matching object exists.
-                    });
-            });
-            debugger;
-            id = ac.params.getFromRoute().id;
-            // sys.puts("ID" + id);
-
-            // this.db.open(function (error, client) {
-            //     if (error) throw error;
-            //     debugger;
-            //     var collection = new self.mongodb.Collection(client, 'posts');
-            //     collection.find({}, {safe: true},
-            //         function(err, object) {
-            //             debugger;
-            //             if (err) console.warn("**************", err.message);
-            //             else {
-            //                 object.toArray(function(err, docs) {
-            //                     callback(null, docs);
-            //                 });
-            //             }  // undefined if no matching object exists.
-            //         });
-            // });
-
-            // callback(null, { some: 'data' });
+            global.lockIterator++;
+            console.warn("**************", global.lockIterator);
+            callback( global.lockIterator % 2 == 0 );
         },
+
+        setLockValue: function( id, callback ) {
+
+        },
+
+        /**
+        * Fake singleton
+        */
+        initializedIfNotSet: function() {
+            if( !global.lockIterator ) {
+                global.lockIterator = 0;
+            }
+        }
 
 
     };
