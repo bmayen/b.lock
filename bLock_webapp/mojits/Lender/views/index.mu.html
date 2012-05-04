@@ -4,4 +4,35 @@
 
 	{{{lenderMap}}}
 
+	<section class="results">
+		<h2>Bicycle Status Reports</h2>
+
+		<div class="results-wrap">
+			<table>
+				<thead>
+					<tr>
+						<th class="count"></th>
+						<th class="bike-id">BIKE ID</th>
+						<th class="location">LOCATION</th>
+						<th class="trip-type">TRIP TYPE</th>
+						<th class="rating">CONDITION</th>
+						<th class="indicator"></th>
+					</tr>
+				</thead>
+			</table>
+			{{#bikes}}
+			<a href="/lender/bike-profile">
+				<table>
+					<tr>
+						<td class="count">{{id}}</td>
+						<td class="bike-id">Bike {{id}}</td>
+						<td class="location">Location</td>
+						<td class="trip-type">{{trip_type}}</td>
+						<td class="rating">* * * *</td>
+						<td class="indicator"><img src="/static/bLock_webapp/assets/indicator.png"></td>
+					</tr>
+				</table>
+			</a>
+			{{/bikes}}
+		</div>
 </div>

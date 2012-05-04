@@ -30,7 +30,23 @@ YUI.add('LenderModelFoo', function(Y, NAME) {
          */
         getData: function(callback) {
             callback(null, { some: 'data' });
-        }
+        },
+
+	    getBikes: function(callback) {
+            var self = this,
+                bikes = [];
+
+		    console.log(global.db);
+
+            Y.each(global.db, function(val) {
+                Y.each(val.bikes, function(val) {
+                    console.log(val);
+                    bikes.push(val);
+                });
+            });
+
+            callback(null, bikes);
+	    }
 
     };
 

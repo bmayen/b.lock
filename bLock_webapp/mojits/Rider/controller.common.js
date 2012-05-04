@@ -36,8 +36,6 @@ YUI.add('Rider', function(Y, NAME) {
 
 	            ac.params.params.body.navClass = 'test data';
 
-	            console.log("*************************", bikes);
-
                 ac.composite.done({
                     template: {
 	                    ns_class: "rider index",

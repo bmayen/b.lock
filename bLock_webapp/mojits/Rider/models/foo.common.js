@@ -4,8 +4,6 @@
 /*jslint anon:true, sloppy:true, nomen:true*/
 YUI.add('RiderModelFoo', function(Y, NAME) {
 
-	var db;
-
 /**
  * The RiderModelFoo module.
  *
@@ -45,10 +43,9 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 		    var self = this,
 			    bikes = [];
 
-		    console.log(db);
-		    Y.each(db, function(val) {
-			    console.log("val: ", val);
-			    console.log("val.bikes: ", val.bikes);
+		    this.initializedIfNotSet();
+
+		    Y.each(global.db, function(val) {
 			    Y.each(val.bikes, function(val) {
 				    console.log(val);
 	                bikes.push(val);
@@ -115,85 +112,93 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             if( !global.lockIterator ) {
                 global.lockIterator = 0;
             }
-        }
 
+	        if( !global.db ) {
+                this.initDb();
+            }
+
+        },
+
+	    initDb: function() {
+		    global.db = [{
+                'name': {
+                    first: 'brett',
+                    last: 'mayen',
+                    nickname: 'brettm'
+                },
+
+                bikes: [{
+                    id: 0,
+                    available: true,
+                    trip_type: 'One Way',
+                    unlock_code: '1eju2ewj45jfj3',
+                    location: {
+                        epicenter: {
+                            lat: 70.759136,
+                            long: -103.990262
+                        },
+                        radius: 1000
+                    },
+                    deadline: 201336052351974,
+                    current_location: {
+                        lat: 1.02348,
+                        long: 93.45573
+                    }
+                },{
+                    id: 1,
+                    available: true,
+                    trip_type: 'Round Trip',
+                    unlock_code: '1eju2ewj45jfj3',
+                    location: {
+                        epicenter: {
+                            lat: 60.759136,
+                            long: -93.990262
+                        },
+                        radius: 1000
+                    },
+                    deadline: 201336052351974,
+                    current_location: {
+                        lat: 8.02348,
+                        long: 63.45573
+                    }
+                },{
+                    id: 2,
+                    available: true,
+                    trip_type: 'Round Trip',
+                    unlock_code: '1eju2ewj45jfj3',
+                    location: {
+                        epicenter: {
+                            lat: 50.759136,
+                            long: -83.990262
+                        },
+                        radius: 1000
+                    },
+                    deadline: 201336052351974,
+                    current_location: {
+                        lat: 6.02348,
+                        long: 33.45573
+                    }
+                },{
+                    id: 3,
+                    available: true,
+                    trip_type: 'One Way',
+                    unlock_code: '1eju2ewj45jfj3',
+                    location: {
+                        epicenter: {
+                            lat: 60.759136,
+                            long: -93.990262
+                        },
+                        radius: 1000
+                    },
+                    deadline: 201336052351974,
+                    current_location: {
+                        lat: 25.02348,
+                        long: 25.45573
+                    }
+                }]
+            }];
+	    }
     };
 
-	db = [{
-			'name': {
-				first: 'brett',
-				last: 'mayen',
-				nickname: 'brettm'
-			},
 
-			bikes: [{
-				id: 0,
-				available: true,
-				trip_type: 'One Way',
-				unlock_code: '1eju2ewj45jfj3',
-				location: {
-					epicenter: {
-						lat: 70.759136,
-						long: -103.990262
-					},
-					radius: 1000
-				},
-				deadline: 201336052351974,
-				current_location: {
-					lat: 1.02348,
-					long: 93.45573
-				}
-			},{
-				id: 1,
-				available: true,
-				trip_type: 'Round Trip',
-				unlock_code: '1eju2ewj45jfj3',
-				location: {
-					epicenter: {
-						lat: 60.759136,
-						long: -93.990262
-					},
-					radius: 1000
-				},
-				deadline: 201336052351974,
-				current_location: {
-					lat: 8.02348,
-					long: 63.45573
-				}
-			},{
-				id: 2,
-				available: true,
-				trip_type: 'Round Trip',
-				unlock_code: '1eju2ewj45jfj3',
-				location: {
-					epicenter: {
-						lat: 50.759136,
-						long: -83.990262
-					},
-					radius: 1000
-				},
-				deadline: 201336052351974,
-				current_location: {
-					lat: 6.02348,
-					long: 33.45573
-				}
-			},{
-				id: 3,
-				available: true,
-				trip_type: 'One Way',
-				unlock_code: '1eju2ewj45jfj3',
-				location: {
-					epicenter: {
-						lat: 60.759136,
-						long: -93.990262
-					},
-					radius: 1000
-				},
-				deadline: 201336052351974,
-				current_location: {
-					lat: 25.02348,
-					long: 25.45573
-				}
-			}]
-		}];
 }, '0.0.1', {requires: []});

@@ -22,7 +22,7 @@ YUI.add('Rider', function(Y, NAME) {
             this.config = config;
         },
 
-	    initMap: function() {
+	    initMap: function(ac) {
             var self = this,
 	            myOptions = {
 	                center: new google.maps.LatLng(-34.397, 150.644),
@@ -30,13 +30,13 @@ YUI.add('Rider', function(Y, NAME) {
 	                mapTypeId: google.maps.MapTypeId.ROADMAP
 	            };
 
-		    //this.models.RiderModelFoo.getBikes(function(err, bikes) {
+		    ac.models.RiderModelFoo.getBikes(function(err, bikes) {
 			    self.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
 
                 var bounds = new google.maps.LatLngBounds(), //  Create a new viewpoint bound
                     coords, marker, markerIdx, i;
 
-                for (i = 0; i < events.length; ++i) {
+                for (i = 0; i < bikes.length; ++i) {
                     coords = new google.maps.LatLng(event.data("lat"), event.data("lng"));
                     marker = new google.maps.Marker({
                         position: coords,
@@ -49,9 +49,7 @@ YUI.add('Rider', function(Y, NAME) {
 
                 //  Fit these bounds to the map
                 self.map.fitBounds(bounds);
-		    //});
-
-
+		    });
         }
     };
 

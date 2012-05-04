@@ -13,14 +13,84 @@
 }
 
 .lender.index .map {
-	float: left;
-	width: 300px;
-	height: 300px;
+	width: 950px;
+	height: 435px;
+	border: 12px solid #141414;
 	background: black;
 }
 
 .lender.index .results {
 	clear: both;
+}
+
+.lender.index .results h2 {
+	font-size: 32px;
+	margin: 0 0 30px 25px;
+	padding-top: 70px;
+}
+
+.lender.index .results .results-wrap {
+	background: rgba(0,0,0,.3);
+	padding-bottom: 1px;
+}
+
+.lender.index .results table {
+	width: 964px;
+	margin: 5px;
+}
+
+.lender.index .results table td,
+.lender.index .results table th {
+	height: 70px;
+	text-align: left;
+}
+
+.lender.index .results table td {
+	background: black url(/static/bLock_webapp/assets/broken_noise.png) repeat;
+	line-height: 70px;
+	font-size: 20px;
+}
+
+.lender.index .results table th {
+	height: 45px;
+	line-height: 45px;
+}
+
+.lender.index .results a {
+	color: #8c8c8c;
+}
+
+.lender.index .results table .count {
+	width: 105px;
+	padding-left: 20px;
+}
+
+.lender.index .results table .bike-id {
+	width: 150px;
+}
+
+.lender.index .results table .location {
+	width: 289px;
+}
+
+.lender.index .results table .trip-type {
+	width: 155px;
+}
+
+.lender.index .results table .rating {
+	width: 205px;
+}
+.lender.index .results table td.rating {
+	color: red;
+}
+.lender.index .results table .indicator {
+	width: 40px;
+}
+
+.lender.index .results table .indicator img {
+	position: relative;
+	top: 15px;
+	right: 15px;
 }
 
 /** bike-profile **/

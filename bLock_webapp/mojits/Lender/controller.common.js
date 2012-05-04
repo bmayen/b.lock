@@ -29,15 +29,20 @@ YUI.add('Lender', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.LenderModelFoo.getData(function(err, data) {
+            ac.models.LenderModelFoo.getBikes(function(err, bikes) {
                 if (err) {
                     ac.error(err);
                     return;
                 }
                 ac.composite.done({
-	                template: {ns_class: "lender index"}
+	                template: {
+                        ns_class: "lender index",
+                        bikes: bikes
+                    }
                 });
             });
+
+
         },
 
 	    /**
