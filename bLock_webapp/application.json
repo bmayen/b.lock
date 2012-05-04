@@ -42,6 +42,10 @@
                 }
             },
 
+            "riderplain": {
+                "type": "Rider"
+                },
+
 		    "lender": {
                 "base": "_frame",
                 "config": {

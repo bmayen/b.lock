@@ -17,7 +17,6 @@ YUI.add('Rider', function(Y, NAME) {
      * @constructor
      */
     Y.mojito.controllers[NAME] = {
-
         init: function(config) {
             this.config = config;
         },
@@ -46,6 +45,8 @@ YUI.add('Rider', function(Y, NAME) {
                     }
                 });
             });
+
+
         },
 
 	    /**
@@ -91,27 +92,11 @@ YUI.add('Rider', function(Y, NAME) {
          *        to the Mojito API.
          */
         getLockValue: function(ac) {
-
-            ac.models.RiderModelFoo.testMongo(function(err, data) {
-                if (err) {
-                    ac.error(err);
-                    return;
-                }
-
-                ac.params.params.body.navClass = 'test data';
-
-                ac.done({
-                });
+            var self = this;
+            id = ac.params.getFromRoute().id
+            ac.models.RiderModelFoo.getLockValue( id, function( isLocked ) {
+                ac.done( isLocked == 0 ? "{1}" : "{0}"); 
             });
-            // ac.models.RiderModelFoo.getBikeStatus(function(err, data){
-            //     if (err) {
-            //         ac.error(err);
-            //         return;
-            //     }
-            //     ac.composite.done({
-            //         template: {ns_class: "rider bike-reviews"}
-            //     });
-            // });
         },
 
 	    /** HELPERS **/
