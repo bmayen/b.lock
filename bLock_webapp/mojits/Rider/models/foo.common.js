@@ -45,7 +45,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
 		    this.initializedIfNotSet();
 
-		    Y.each(global.db, function(val) {
+		    Y.each(this.getGlobal().db, function(val) {
 			    Y.each(val.bikes, function(val) {
 				    console.log(val);
 	                bikes.push(val);
@@ -72,6 +72,23 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             });
             */
         },
+
+	    getBike: function(id, callback) {
+            var self = this,
+                bike;
+
+            this.initializedIfNotSet();
+
+            Y.each(this.getGlobal().db, function(val) {
+                Y.each(val.bikes, function(val) {
+	                if (val.id == id) {
+	                    bike = val;
+	                }
+                });
+            });
+
+            callback(null, bike);
+	    },
 
 	    testMongo: function(callback) {
 		    var self = this;
@@ -106,6 +123,12 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             // callback( global.lockIterator % 2 == 0 );
         },
 
+	    reserve: function( id ) {
+		    this.initializedIfNotSet();
+		    this.getGlobal().db[0].activeBikeId = id;
+		    console.log("****************", this.getGlobal().db[0]);
+        },
+
         /**
         * Fake singleton
         */
@@ -117,7 +140,6 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 	        if( !this.getGlobal().db ) {
                 this.initDb();
             }
-
         },
 
         /**

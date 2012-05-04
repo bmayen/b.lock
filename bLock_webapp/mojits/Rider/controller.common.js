@@ -54,13 +54,19 @@ YUI.add('Rider', function(Y, NAME) {
          *        to the Mojito API.
          */
         bikeProfile: function(ac) {
-            ac.models.RiderModelFoo.getData(function(err, data) {
+		    var id = ac.params.getFromRoute().id;
+
+            ac.models.RiderModelFoo.getBike(id, function(err, bike) {
                 if (err) {
                     ac.error(err);
                     return;
                 }
+
                 ac.composite.done({
-	                template: {ns_class: "rider bike-profile"}
+	                template: {
+		                ns_class: "rider bike-profile",
+	                    bike: bike
+	                }
                 });
             });
         },
@@ -91,7 +97,7 @@ YUI.add('Rider', function(Y, NAME) {
          */
         getLockValue: function(ac) {
             var self = this;
-            id = ac.params.getFromRoute().id
+            var id = ac.params.getFromRoute().id;
             ac.models.RiderModelFoo.getLockValue( id, function( isLocked ) {
                 ac.done( isLocked == 1 ? "{1}" : "{0}"); 
             });
@@ -118,14 +124,16 @@ YUI.add('Rider', function(Y, NAME) {
          */
         setLockValueFalse: function(ac) {
             var self = this;
-            id = ac.params.getFromRoute().id;
+            var id = ac.params.getFromRoute().id;
             ac.models.RiderModelFoo.setLockValue( id, false );
             ac.done( 'false' );
         },
 
-	    /** HELPERS **/
-	    showMap: function(filters) {
-
+	    reserve: function(ac) {
+		    var self = this;
+            var id = ac.params.getFromRoute().id;
+            ac.models.RiderModelFoo.reserve( id, false );
+            ac.done( 'false' );
 	    }
     };
 

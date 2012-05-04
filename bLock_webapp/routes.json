@@ -21,11 +21,17 @@
 
 	"rider bikeProfile": {
       "verbs": ["get"],
-      "path": "/rider/bike-profile",
+      "path": "/rider/bike-profile/:id",
       "call": "rider.bikeProfile"
     },
 
-  "rider bikeReviews": {
+	"rider reserve": {
+	    "verbs": ["get"],
+	    "path": "/rider/reserve/:id",
+	    "call": "riderplain.reserve"
+    },
+
+    "rider bikeReviews": {
       "verbs": ["get"],
       "path": "/rider/bike-reviews",
       "call": "rider.bikeReviews"
