@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0560EA15537B720014F4F4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0560E915537B720014F4F4 /* icon.png */; };
 		ED337055155373160021BB93 /* time_bkgd.png in Resources */ = {isa = PBXBuildFile; fileRef = ED337047155373160021BB93 /* time_bkgd.png */; };
 		ED337056155373160021BB93 /* time_bkgd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED337048155373160021BB93 /* time_bkgd@2x.png */; };
 		ED337057155373160021BB93 /* time_btn1-tap.png in Resources */ = {isa = PBXBuildFile; fileRef = ED337049155373160021BB93 /* time_btn1-tap.png */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED0560E915537B720014F4F4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../../../Dropbox/Hackathon/icon.png; sourceTree = "<group>"; };
 		ED337047155373160021BB93 /* time_bkgd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = time_bkgd.png; path = assets/export/time_bkgd.png; sourceTree = SOURCE_ROOT; };
 		ED337048155373160021BB93 /* time_bkgd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "time_bkgd@2x.png"; path = "assets/export/time_bkgd@2x.png"; sourceTree = SOURCE_ROOT; };
 		ED337049155373160021BB93 /* time_btn1-tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "time_btn1-tap.png"; path = "assets/export/time_btn1-tap.png"; sourceTree = SOURCE_ROOT; };
@@ -296,6 +298,7 @@
 		ED88EE7015530AC000D932B1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED0560E915537B720014F4F4 /* icon.png */,
 				EDC153E315536215000548EF /* timer */,
 				ED85EE40155358EF00798140 /* map */,
 				ED3F35451553397A0036E096 /* landing */,
@@ -450,6 +453,7 @@
 				ED337060155373160021BB93 /* time_cntdown@2x.png in Resources */,
 				ED337061155373160021BB93 /* time_dots.png in Resources */,
 				ED337062155373160021BB93 /* time_dots@2x.png in Resources */,
+				ED0560EA15537B720014F4F4 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

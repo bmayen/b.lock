@@ -204,7 +204,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="01:02:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontSizeToFit="NO" id="wLr-2u-JYx">
                                 <rect key="frame" x="0.0" y="62" width="320" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="73"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="64"/>
                                 <color key="textColor" red="1" green="0.18039215689999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -267,6 +267,28 @@
         <image name="time_cntdown.png" width="241" height="70"/>
         <image name="time_dots.png" width="58" height="11"/>
     </resources>
+    <classes>
+        <class className="BLKTimeLeftViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKTimeLeftViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onBackButtonWasPressed:"/>
+                <relationship kind="action" name="onWantsToExtendRide:"/>
+                <relationship kind="action" name="onWantsToLockupBike:"/>
+                <relationship kind="outlet" name="timeDisplay" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BLKUnlockMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKUnlockMapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onBackButtonWasPressed:"/>
+                <relationship kind="outlet" name="mapview" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="unlockButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BLKViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
