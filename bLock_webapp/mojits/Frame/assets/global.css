@@ -5,6 +5,7 @@ html {
 body {
 	width: 1024px;
 	margin: 0 auto;
+	padding-bottom: 50px;
 	background: black url(/static/bLock_webapp/assets/broken_noise.png) repeat;
 }
 

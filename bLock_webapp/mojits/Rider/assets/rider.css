@@ -41,12 +41,13 @@
 
 .rider.index .results h2 {
 	font-size: 32px;
-	margin: 0 0 30px;
+	margin: 0 0 30px 25px;
 	padding-top: 70px;
 }
 
 .rider.index .results .results-wrap {
 	background: rgba(0,0,0,.3);
+	padding-bottom: 1px;
 }
 
 .rider.index .results table {
@@ -63,14 +64,21 @@
 .rider.index .results table td {
 	background: black url(/static/bLock_webapp/assets/broken_noise.png) repeat;
 	line-height: 70px;
+	font-size: 20px;
 }
 
 .rider.index .results table th {
+	height: 45px;
+	line-height: 45px;
+}
 
+.rider.index .results a {
+	color: #8c8c8c;
 }
 
 .rider.index .results table .count {
-	width: 125px;
+	width: 105px;
+	padding-left: 20px;
 }
 
 .rider.index .results table .bike-id {
