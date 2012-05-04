@@ -29,7 +29,9 @@
                                 }
                             },
 	                        "children": {
-                                "topNav": {"type": "TopNav"}
+                                "topNav": {"type": "TopNav"},
+		                        "subNav": {"type":"RiderNav"},
+		                        "riderMap": {"type": "RiderMap"}
                             }
                         }
                     }
@@ -49,7 +51,9 @@
                                 }
                             },
                             "children": {
-                                "topNav": {"type": "TopNav"}
+                                "topNav": {"type": "TopNav"},
+	                            "subNav": {"type":"LenderNav"},
+                                "lenderMap": {"type": "LenderMap"}
                             }
                         }
                     }

@@ -1,12 +1,28 @@
-<div id="{{mojit_view_id}}">
+<div id="{{mojit_view_id}}" class="{{ns_class}}">
 	{{{topNav}}}
-	<img src="/static/Rider/assets/01.jpg" />
-    <dl>
-        <dt>status</dt>
-        <dd id="dd_status">{{status}}</dd>
-        <dt>data</dt>
-        <dd id="dd_data">
-            <b>some:</b> {{#data}}{{some}}{{/data}}
-        </dd>
-    </dl>
+	{{{subNav}}}
+
+	<aside>
+		<ul class="map-controls">
+			<li><a href="#">Location</a></li>
+			<li><a href="#">Roundtrip?</a></li>
+			<li><a href="#">Duration</a></li>
+			<li><a href="#">Date</a></li>
+			<li><a href="#">Time</a></li>
+			<li><a href="#">Submit</a></li>
+		</ul>
+	</aside>
+
+	{{{riderMap}}}
+
+	<section>
+		<h2>Results</h2>
+		<table>
+			<tr>
+				<td><a href="#">Bike 1</a></td>
+				<td>Location</td>
+				<td>Rating</td>
+			</tr>
+		</table>
+	</section>
 </div>

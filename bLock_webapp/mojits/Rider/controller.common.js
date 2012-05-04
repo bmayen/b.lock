@@ -35,15 +35,10 @@ YUI.add('Rider', function(Y, NAME) {
                     return;
                 }
 
-	            ac.params.body.testData = 'test data';
-
-	            //ac.instance.config.children.topNav.config.testData = 'test Data';
-
-	            console.log('*********', ac.instance.config.children.topNav);
+	            ac.params.params.body.navClass = 'test data';
 
                 ac.composite.done({
-                    status: 'Rider Index',
-                    data: data
+                    template: {ns_class: "rider index"}
                 });
 
 
@@ -63,8 +58,7 @@ YUI.add('Rider', function(Y, NAME) {
                     return;
                 }
                 ac.done({
-                    status: 'Bike Profile',
-                    data: data
+	                template: {ns_class: "rider bike-profile"}
                 });
             });
         },
@@ -82,11 +76,15 @@ YUI.add('Rider', function(Y, NAME) {
                     return;
                 }
                 ac.done({
-                    status: 'Bike Reviews',
-                    data: data
+	                template: {ns_class: "rider bike-reviews"}
                 });
             });
-        }
+        },
+
+	    /** CLIENT SIDE **/
+	    setNav: function() {
+
+	    }
     };
 
 }, '0.0.1', {requires: ['mojito', 'RiderModelFoo']});
