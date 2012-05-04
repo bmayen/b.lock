@@ -120,9 +120,14 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             this.getGlobal().lockIterator = value;
         },
 
+        getActiveBike: function( id ) {
+            this.initializedIfNotSet();
+            return this.getGlobal().db[id].activeBikeId;
+        },
 	    reserve: function( id ) {
 		    this.initializedIfNotSet();
 		    this.getGlobal().db[0].activeBikeId = id;
+
 		    console.log("****************", this.getGlobal().db[0]);
         },
 

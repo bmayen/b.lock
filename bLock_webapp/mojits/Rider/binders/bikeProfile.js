@@ -36,13 +36,19 @@ YUI.add('RiderBinderBikeProfile', function(Y, NAME) {
 	        var self = this;
             this.node = node;
 
+
 		    Y.all('.reserve-btn').on('click', function(e) {
-			    console.log(this.getAttribute('href'));
-			    Y.io(this.getAttribute('href'), {
-			        on: {success: function() { }}
+                e.preventDefault();
+                var final_url = this.getAttribute('href')[0];
+
+			    Y.io( final_url, {
+			        on: {
+                        complete: function( ) {
+                            console.log("IO COMPLETE!");
+                            window.location = "/rider"
+                        }
+                    }
 			    });
-			    e.preventDefault();
-			    window.location = "/rider";
 		    });
         }
     };
