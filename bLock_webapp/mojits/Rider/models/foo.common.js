@@ -109,18 +109,15 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
             });
 	    },
 
-        getLockValue: function(id, callback) {
+        getLockValue: function(id) {
             this.initializedIfNotSet();
-
-            global.lockIterator++;
-            console.warn("**************", global.lockIterator);
-            callback( global.lockIterator % 2 == 0 );
+            return this.getGlobal().lockIterator;
         },
 
         setLockValue: function( id, value ) {
             // TODO: SET VALUE FOR REAL
             this.initializedIfNotSet();
-            // callback( global.lockIterator % 2 == 0 );
+            this.getGlobal().lockIterator = value;
         },
 
 	    reserve: function( id ) {
@@ -134,7 +131,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
         */
         initializedIfNotSet: function() {
             if( !this.getGlobal().lockIterator ) {
-                this.getGlobal().lockIterator = 0;
+                this.getGlobal().lockIterator = false;
             }
 
 	        if( !this.getGlobal().db ) {

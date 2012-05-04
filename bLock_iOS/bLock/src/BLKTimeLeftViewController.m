@@ -48,6 +48,7 @@
     
     static bool isLocked = false;
     isLocked = !isLocked;
+
     
     // Toggle
     NSString* urlString = NULL;
