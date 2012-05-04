@@ -5,8 +5,10 @@
 	<img src="/static/bLock_webapp/assets/bike_profile.png" class='bike-profile' />
 
 	<div class="reserve">
-		<b>RESERVE FOR: </b> Tuesday May 08, 2012 | 1:00pm – 5:00pm | Roundtrip
-		<a href="#" class='reserve-btn'></a>
+		{{#bike}}
+		<b>RESERVE FOR: </b> Tuesday May 08, 2012 | 1:00pm – 5:00pm | {{trip_type}}
+		<a href="/rider/reserve/{{id}}" class='reserve-btn'></a>
+		{{/bike}}
 	</div>
 
 	<img src="/static/bLock_webapp/assets/review_list.png" class='review-list' />

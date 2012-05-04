@@ -50,7 +50,7 @@ YUI.add('Lender', function(Y, NAME) {
 
                 //  Fit these bounds to the map
                 self.map.fitBounds(bounds);
-            });
+           });
 	    }
     };
 
