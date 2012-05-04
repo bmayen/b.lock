@@ -79,6 +79,36 @@ YUI.add('Rider', function(Y, NAME) {
             });
         },
 
+        /**
+         * Retrieve the status of a lock
+         *
+         * @param ac {Object} The ActionContext that provides access
+         *        to the Mojito API.
+         */
+        getLockValue: function(ac) {
+
+            ac.models.RiderModelFoo.testMongo(function(err, data) {
+                if (err) {
+                    ac.error(err);
+                    return;
+                }
+
+                ac.params.params.body.navClass = 'test data';
+
+                ac.done({
+                });
+            });
+            // ac.models.RiderModelFoo.getBikeStatus(function(err, data){
+            //     if (err) {
+            //         ac.error(err);
+            //         return;
+            //     }
+            //     ac.composite.done({
+            //         template: {ns_class: "rider bike-reviews"}
+            //     });
+            // });
+        },
+
 	    /** HELPERS **/
 	    showMap: function(filters) {
 

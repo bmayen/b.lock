@@ -20,8 +20,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
         init: function(config) {
             this.config = config;
-
-            debugger;
+            
 	        this.mongodb = require('mongodb');
             this.server = new this.mongodb.Server("localhost", 27017, {});
 
@@ -44,10 +43,30 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
 	    testMongo: function(callback) {
 		    var self = this;
-
             this.db.open(function (error, client) {
                 if (error) throw error;
                 var collection = new self.mongodb.Collection(client, 'test');
+                debugger;
+                collection.find({}, {safe: true},
+                    function(err, object) {
+                        debugger;
+                        if (err) console.warn("**************", err.message);
+                        else {
+                            object.toArray(function(err, docs) {
+                                callback(null, docs);
+                            });
+                        }  // undefined if no matching object exists.
+                    });
+            });
+	    },
+
+        getBikeStatus: function(callback) {
+            var self = this;
+
+            this.db.open(function (error, client) {
+                if (error) throw error;
+                var collection = new self.mongodb.Collection(client, 'posts');
+            debugger;
 
                 collection.find({}, {safe: true},
                     function(err, object) {
@@ -59,7 +78,30 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                         }  // undefined if no matching object exists.
                     });
             });
-	    }
+            debugger;
+            id = ac.params.getFromRoute().id;
+            // sys.puts("ID" + id);
+
+            // this.db.open(function (error, client) {
+            //     if (error) throw error;
+            //     debugger;
+            //     var collection = new self.mongodb.Collection(client, 'posts');
+            //     collection.find({}, {safe: true},
+            //         function(err, object) {
+            //             debugger;
+            //             if (err) console.warn("**************", err.message);
+            //             else {
+            //                 object.toArray(function(err, docs) {
+            //                     callback(null, docs);
+            //                 });
+            //             }  // undefined if no matching object exists.
+            //         });
+            // });
+
+            // callback(null, { some: 'data' });
+        },
+
+
     };
 
 }, '0.0.1', {requires: []});

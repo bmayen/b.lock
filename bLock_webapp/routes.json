@@ -25,11 +25,17 @@
       "call": "rider.bikeProfile"
     },
 
-    "rider bikeReviews": {
+  "rider bikeReviews": {
       "verbs": ["get"],
       "path": "/rider/bike-reviews",
       "call": "rider.bikeReviews"
     },
+
+  "rider getLockValue": {
+    "verbs": ["get"],
+    "path": "/rider/lock-value/:id",
+    "call": "rider.getLockValue"
+  },
 
 	"lender index": {
       "verbs": ["get"],
