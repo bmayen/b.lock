@@ -142,7 +142,6 @@ YUI.add('Rider', function(Y, NAME) {
         },
 
 	    reserve: function(ac) {
-            debugger;
 		    var self = this;
             var id = ac.params.getFromRoute().id;
             ac.models.RiderModelFoo.reserve( id, false );
