@@ -34,7 +34,7 @@ YUI.add('Lender', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
+                ac.composite.done({
 	                template: {ns_class: "lender index"}
                 });
             });
@@ -52,7 +52,7 @@ YUI.add('Lender', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
+                ac.composite.done({
 	                template: {ns_class: "lender bike-stats"}
                 });
             });

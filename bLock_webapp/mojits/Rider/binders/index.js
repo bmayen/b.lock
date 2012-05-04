@@ -24,6 +24,8 @@ YUI.add('RiderBinderIndex', function(Y, NAME) {
          */
         init: function(mojitProxy) {
             this.mojitProxy = mojitProxy;
+
+	        this.mojitProxy.invoke('test', {params: {testParam: 'test param'}}, function() { console.log('invoked controller\'s test method'); });
         },
 
         /**

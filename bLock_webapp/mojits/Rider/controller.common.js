@@ -29,7 +29,7 @@ YUI.add('Rider', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.RiderModelFoo.getData(function(err, data) {
+            ac.models.RiderModelFoo.getMap(function(err, data) {
                 if (err) {
                     ac.error(err);
                     return;
@@ -40,8 +40,6 @@ YUI.add('Rider', function(Y, NAME) {
                 ac.composite.done({
                     template: {ns_class: "rider index"}
                 });
-
-
             });
         },
 
@@ -57,7 +55,7 @@ YUI.add('Rider', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
+                ac.composite.done({
 	                template: {ns_class: "rider bike-profile"}
                 });
             });
@@ -75,14 +73,14 @@ YUI.add('Rider', function(Y, NAME) {
                     ac.error(err);
                     return;
                 }
-                ac.done({
+                ac.composite.done({
 	                template: {ns_class: "rider bike-reviews"}
                 });
             });
         },
 
-	    /** CLIENT SIDE **/
-	    setNav: function() {
+	    /** HELPERS **/
+	    showMap: function(filters) {
 
 	    }
     };

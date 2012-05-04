@@ -30,6 +30,10 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
          */
         getData: function(callback) {
             callback(null, { some: 'data' });
+        },
+
+	    getMap: function(callback) {
+            callback(null, { some: 'data' });
         }
 
     };

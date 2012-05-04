@@ -9,7 +9,10 @@
                     "deploy": true,
                     "assets": {
                         "top": {
-                            "blob": ["<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"],
+                            "blob": [
+	                            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+	                            "<script src='http://maps.googleapis.com/maps/api/js?key=AIzaSyBLwTl14sfNRH0H84YU6aqR7evHX17ImSk&sensor=true'></script>"
+                            ],
                             "css": ["/static/Frame/assets/reset.css", "/static/Frame/assets/global.css"]
                         }
                     }
@@ -23,6 +26,7 @@
                     "child": {
                         "type": "Rider",
                         "config": {
+	                        "deploy": true,
                             "assets": {
                                 "top": {
                                     "css": ["/static/Rider/assets/rider.css"]
@@ -45,6 +49,7 @@
                     "child": {
                         "type": "Lender",
                         "config": {
+	                        "deploy": true,
                             "assets": {
                                 "top": {
                                     "css": ["/static/Lender/assets/lender.css"]
