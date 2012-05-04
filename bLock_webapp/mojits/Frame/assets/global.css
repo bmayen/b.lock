@@ -1,6 +1,21 @@
+html {
+	border-top: 3px solid red;
+}
+
+body {
+	width: 1024px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	background: black url(/static/bLock_webapp/assets/broken_noise.png) repeat;
+}
+
 ul, li {
 	margin: 0;
 	list-style: none;
+}
+
+body>div {
+	margin: 0 25px;
 }
 
 .nav:before, .nav:after {
@@ -20,4 +35,62 @@ ul, li {
 
 .nav li {
 	float: left;
+}
+
+.top-nav {
+	margin-top: 60px;
+	height: 72px;
+}
+
+.logo-lrg {
+	float: left;
+}
+
+.top-nav>nav {
+	float: right;
+	margin-top: 15px;
+}
+
+.top-nav>nav li a {
+	display: block;
+	width: 115px;
+	height: 70px;
+	font: 18px/70px Arial, Helvetica;
+	color: #555;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+.top-nav>nav li:hover a,
+.rider.index .top-nav>nav li.rider-nav a,
+.lender.index .top-nav>nav li.lender-nav a,
+.login.index .top-nav>nav li.login-nav a {
+	border-top: 2px solid #555;
+	background: rgba(0,0,0,.2);
+	top: -2px;
+}
+
+.sub-nav {
+	height: 65px;
+	margin: 13px 0 50px;
+	background: rgba(0,0,0,.2);
+}
+
+.sub-nav li a {
+	display: block;
+	height: 65px;
+	padding: 0 25px;
+	font: bold 18px/65px Arial, Helvetica;
+	color: #404040;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+.sub-nav li:hover a,
+.rider.index li.new-res-nav a,
+.lender.index li.view-res-nav a,
+.login.index li.leave-review a {
+	color: #6a6a6a;
 }

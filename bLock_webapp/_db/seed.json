@@ -1,26 +1,73 @@
 [{
-	'id': 0,
 	'name': {
 		first: \'brett\',
 		last: \'mayen\',
 		nickname: \'brettm\'
 	},
 
-	lock: {
+	bikes: [{
 		id: 0,
 		available: true,
 		unlock_code: \'1eju2ewj45jfj3\',
 		location: {
 			epicenter: {
-				lat: 40.759136,
-				long: -73.990262
+				lat: 70.759136,
+				long: -103.990262
 			},
 			radius: 1000,
 		},
 		deadline: 201336052351974,
 		current_location: {
-			lat: 5.02348,
-			long: 23.45573
+			lat: 1.02348,
+			long: 93.45573
 		}
-	}
+	},{
+		id: 1,
+		available: true,
+		unlock_code: \'1eju2ewj45jfj3\',
+		location: {
+			epicenter: {
+				lat: 60.759136,
+				long: -93.990262
+			},
+			radius: 1000,
+		},
+		deadline: 201336052351974,
+		current_location: {
+			lat: 8.02348,
+			long: 63.45573
+		}
+	},{
+		id: 2,
+		available: true,
+		unlock_code: \'1eju2ewj45jfj3\',
+		location: {
+			epicenter: {
+				lat: 50.759136,
+				long: -83.990262
+			},
+			radius: 1000,
+		},
+		deadline: 201336052351974,
+		current_location: {
+			lat: 6.02348,
+			long: 33.45573
+		}
+	},{
+		id: 3,
+		available: true,
+		unlock_code: \'1eju2ewj45jfj3\',
+		location: {
+			epicenter: {
+				lat: 60.759136,
+				long: -93.990262
+			},
+			radius: 1000,
+		},
+		deadline: 201336052351974,
+		current_location: {
+			lat: 25.02348,
+			long: 25.45573
+		}
+	}]
 }]

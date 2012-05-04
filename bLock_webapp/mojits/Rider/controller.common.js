@@ -28,7 +28,7 @@ YUI.add('Rider', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.RiderModelFoo.testMongo(function(err, data) {
+            ac.models.RiderModelFoo.getBikes(function(err, bikes) {
                 if (err) {
                     ac.error(err);
                     return;
@@ -36,8 +36,22 @@ YUI.add('Rider', function(Y, NAME) {
 
 	            ac.params.params.body.navClass = 'test data';
 
+   	            /*
+	            var bikes = [];
+
+                Y.each(ac.config.getDefinition('feeds'), function(feed, id) {
+                    feed.link = 'read.html?id=' + encodeURIComponent(id);
+                    vudata.tiles.push(feed);
+                });
+                */
+
+	            console.log("*************************", bikes);
+
                 ac.composite.done({
-                    template: {ns_class: "rider index"}
+                    template: {
+	                    ns_class: "rider index",
+	                    bikes: bikes
+                    }
                 });
             });
 
