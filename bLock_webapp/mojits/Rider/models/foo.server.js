@@ -21,6 +21,7 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
         init: function(config) {
             this.config = config;
 
+            debugger;
 	        this.mongodb = require('mongodb');
             this.server = new this.mongodb.Server("localhost", 27017, {});
 
