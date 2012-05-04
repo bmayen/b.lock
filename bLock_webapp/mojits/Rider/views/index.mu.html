@@ -22,24 +22,24 @@
 			<table>
 				<thead>
 					<tr>
-						<th></th>
-						<th>BIKE ID</th>
-						<th>LOCATION</th>
-						<th>TRIP TYPE</th>
-						<th>RATING</th>
-						<th></th>
+						<th class="count"></th>
+						<th class="bike-id">BIKE ID</th>
+						<th class="location">LOCATION</th>
+						<th class="trip-type">TRIP TYPE</th>
+						<th class="rating">RATING</th>
+						<th class="indicator"></th>
 					</tr>
 				</thead>
 			</table>
 			{{#bikes}}
 			<table>
 				<tr>
-					<td>0</td>
-					<td><a href="#">Bike {{id}}</a></td>
-					<td>Location</td>
-					<td>Rating</td>
-					<td>Rating</td>
-					<td></td>
+					<td class="count">0</td>
+					<td class="bike-id"><a href="#">Bike {{id}}</a></td>
+					<td class="location">Location</td>
+					<td class="trip-type">Rating</td>
+					<td class="rating">Rating</td>
+					<td class="indicator"></td>
 				</tr>
 			</table>
 			{{/bikes}}

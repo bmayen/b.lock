@@ -50,13 +50,47 @@
 }
 
 .rider.index .results table {
-	width: 100%;
+	width: 964px;
 	margin: 5px;
 }
 
-.rider.index .results table td {
+.rider.index .results table td,
+.rider.index .results table th {
 	height: 70px;
+	text-align: left;
+}
+
+.rider.index .results table td {
 	background: black url(/static/bLock_webapp/assets/broken_noise.png) repeat;
+	line-height: 70px;
+}
+
+.rider.index .results table th {
+
+}
+
+.rider.index .results table .count {
+	width: 125px;
+}
+
+.rider.index .results table .bike-id {
+	width: 150px;
+}
+
+.rider.index .results table .location {
+	width: 289px;
+}
+
+.rider.index .results table .trip-type {
+	width: 155px;
+}
+
+.rider.index .results table .rating {
+	width: 205px;
+}
+
+.rider.index .results table .indicator {
+	width: 40px;
 }
 
 /** bike-profile **/
