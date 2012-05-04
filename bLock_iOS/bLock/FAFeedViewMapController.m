@@ -119,8 +119,7 @@
         // Animate
         CGRect endFrame = view.frame;
         CGRect startFrame = endFrame;
-        startFrame.origin.x = view.center.x;
-        startFrame.origin.y += 10;
+        startFrame.origin.y += 20;
         startFrame.size.width = 0;
         startFrame.size.height = 0;
 //        view.frame = startFrame;

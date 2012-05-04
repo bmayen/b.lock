@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="I26-E1-YgT">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -51,15 +52,15 @@
                                 <rect key="frame" x="23" y="129" width="274" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" image="lockstamp.png" id="cQt-Ms-Vzm">
-                                <rect key="frame" x="66" y="20" width="189" height="106"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lockstamp.png" id="cQt-Ms-Vzm">
+                                <rect key="frame" x="111" y="44" width="98" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RCq-w3-AAU">
                                 <rect key="frame" x="31" y="419" width="266" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -67,6 +68,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="start" id="G7a-xb-y1P"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="markLogo" destination="cQt-Ms-Vzm" id="rLJ-xe-ygV"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="574" y="-209"/>
@@ -286,6 +290,9 @@
         </class>
         <class className="BLKViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BLKViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="markLogo" candidateClass="UIImageView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
