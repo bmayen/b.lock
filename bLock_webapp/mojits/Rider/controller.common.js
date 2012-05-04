@@ -29,7 +29,7 @@ YUI.add('Rider', function(Y, NAME) {
          *        to the Mojito API.
          */
         index: function(ac) {
-            ac.models.RiderModelFoo.getMap(function(err, data) {
+            ac.models.RiderModelFoo.testMongo(function(err, data) {
                 if (err) {
                     ac.error(err);
                     return;

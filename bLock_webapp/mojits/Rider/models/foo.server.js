@@ -20,6 +20,11 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
         init: function(config) {
             this.config = config;
+
+	        this.mongodb = require('mongodb');
+            this.server = new this.mongodb.Server("localhost", 27017, {});
+
+            this.db = new this.mongodb.Db('test', this.server, {});
         },
 
         /**
@@ -34,8 +39,26 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
 
 	    getMap: function(callback) {
             callback(null, { some: 'data' });
-        }
+        },
 
+	    testMongo: function(callback) {
+		    var self = this;
+
+            this.db.open(function (error, client) {
+                if (error) throw error;
+                var collection = new self.mongodb.Collection(client, 'test');
+
+                collection.find({}, {safe: true},
+                    function(err, object) {
+                        if (err) console.warn("**************", err.message);
+                        else {
+                            object.toArray(function(err, docs) {
+                                callback(null, docs);
+                            });
+                        }  // undefined if no matching object exists.
+                    });
+            });
+	    }
     };
 
 }, '0.0.1', {requires: []});
