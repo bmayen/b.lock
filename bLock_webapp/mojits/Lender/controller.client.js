@@ -20,17 +20,19 @@ YUI.add('Lender', function(Y, NAME) {
 
         init: function(config) {
             this.config = config;
+        },
 
-	        var myOptions = {
-				center: new google.maps.LatLng(-34.397, 150.644),
-				zoom: 8,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
+	    initMap: function() {
+		    var myOptions = {
+                center: new google.maps.LatLng(-34.397, 150.644),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
-	        console.log(Y.one('.map'));
+            console.log(Y.one('.map'));
 
             this.map = new google.maps.Map(Y.one('.map').getDOMNode(), myOptions);
-        }
+	    }
     };
 
 }, '0.0.1', {requires: ['mojito', 'LenderModelFoo']});
