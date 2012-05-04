@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FAFeedViewMapController.h"
 
-@interface BLKUnlockMapViewController : UIViewController
+@interface BLKUnlockMapViewController : UIViewController {
+    FAFeedViewMapController* mapviewController_;
+}
 
+@property( strong, nonatomic) FAFeedViewMapController* mapviewController;
+// OUTLETS
+@property (weak, nonatomic) IBOutlet UIButton *unlockButton;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
+- (IBAction)onBackButtonWasPressed:(id)sender;
+
+-(void)setupMap;
 @end

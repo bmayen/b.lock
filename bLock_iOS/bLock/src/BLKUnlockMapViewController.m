@@ -9,6 +9,9 @@
 #import "BLKUnlockMapViewController.h"
 
 @implementation BLKUnlockMapViewController
+@synthesize unlockButton;
+@synthesize mapview;
+@synthesize mapviewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,16 +39,37 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    self.unlockButton.enabled = false;
+    self.navigationController.navigationBar.hidden = YES;
+    [self setupMap];
 }
-*/
+
+- (IBAction)onBackButtonWasPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)setupMap {
+    if( mapviewController_ == nil ) {
+        
+        self.mapviewController = [[FAFeedViewMapController alloc] initWithMapView:self.mapview];
+        self.mapviewController.delegate = self;
+        
+//        [self.mapviewController setAllowScroll:YES andAllowZoom:YES];
+        [self.mapviewController setMapSizeWidth:3300 andHeight:3300];
+        [self.mapviewController setPinDelta:CGPointMake(0.003, -0.002)];
+//        [self.mapviewController_ addAnnotation:self.businessAnnotation andShouldPreselect:YES withDisclosure:NO];
+    }
+}
 
 - (void)viewDidUnload
 {
+    [self setUnlockButton:nil];
+    mapview = nil;
+    [self setMapview:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -56,5 +80,6 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 @end

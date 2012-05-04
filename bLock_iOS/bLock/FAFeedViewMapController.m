@@ -17,12 +17,9 @@
 @synthesize delegate=_delegate;
 
 // default initializer
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithMapView:(MKMapView*)aMapView {
     self = [super init];
     if (self) {
-        MKMapView* aMapView = [[MKMapView alloc] init];
-        aMapView.frame = frame;
-
         self.mapView = aMapView;
         [self setMapSizeWidth:2100 andHeight:2100];
         [self setPinDelta:CGPointMake(0.0016, 0.0008)];
