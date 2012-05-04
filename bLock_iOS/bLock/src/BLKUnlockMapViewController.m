@@ -15,10 +15,10 @@
 @synthesize unlockButton;
 @synthesize mapview;
 @synthesize mapviewController;
-@synthesize asiHttpRequest;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -47,8 +47,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-//    self.unlockButton.enabled = false;
+    NSString* urlString = @"http://192.168.43.144:8666/rider/0/get-active-bike";
+    ASIFormDataRequest* asiHttpRequest = [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]];
+	[asiHttpRequest setUseKeychainPersistence: YES];
+	[asiHttpRequest setDelegate:self];
+    [asiHttpRequest setRequestMethod:@"GET"];
+	[asiHttpRequest setShouldPresentAuthenticationDialog:NO];
+	[asiHttpRequest setDidFinishSelector:@selector(requestFinished:)];
+	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
+    [asiHttpRequest setUseCookiePersistence:YES];
+    [asiHttpRequest startSynchronous];
+    
     self.navigationController.navigationBar.hidden = YES;
     [self setupMap];
 }
@@ -56,13 +65,17 @@
 #pragma mark ASIHTTPRequestDelegate
 - (void)requestFinished:(ASIHTTPRequest *)request {
     NSString *responseString = [request responseString];
+
+    NSLog(@"---------------");
+    NSLog(@"%@",responseString);
+
+    // Convert NSString to number
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSNumber * aNumber = [f numberFromString:responseString];
+    bikeIndex_ = [aNumber intValue];
     
-    // Append cookies    
-    NSLog(@"Response StatusCode %i", asiHttpRequest.responseStatusCode);
-    NSLog(@"Response Cookies %@", asiHttpRequest.responseCookies);
-    NSLog(@"Response Headers %@", asiHttpRequest.responseHeaders);
-    NSLog(@"--------------------:");  
-    NSLog(@"%@", responseString);
+    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
@@ -85,10 +98,8 @@
         [self.mapviewController setPinDelta:CGPointMake(0.003, -0.002)];
 
         // TODO: FAKE DATA
-//        for(int i = 0; i < 4; ++i) {
-            BLKBikeAnnotation* aBikeAnnotation = [[BLKBikeAnnotation alloc] initWithTitle:@"Abike" andSubtitle: @"Here"];
+        BLKBikeAnnotation* aBikeAnnotation = [[BLKBikeAnnotation alloc] initWithTitle:@"Abike" andSubtitle: @"Here" andIndex: bikeIndex_];
             [self.mapviewController addAnnotation: aBikeAnnotation andShouldPreselect:YES withSubtitle:@"View Details" withDisclosure:YES];
-//        }
     }
 }
 

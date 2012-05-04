@@ -14,9 +14,9 @@
 
 @interface BLKUnlockMapViewController : UIViewController <ASIHTTPRequestDelegate> {
     FAFeedViewMapController* mapviewController_;
+    int bikeIndex_;
 }
 
-@property(nonatomic, retain) ASIFormDataRequest* asiHttpRequest;
 @property( strong, nonatomic) FAFeedViewMapController* mapviewController;
 // OUTLETS
 @property (weak, nonatomic) IBOutlet UIButton *unlockButton;

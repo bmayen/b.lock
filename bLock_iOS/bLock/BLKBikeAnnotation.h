@@ -29,7 +29,7 @@
 
 // Designated initalizer
 //-(id)initWithPosts:(Posts*)aPosts;
--(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle;
+-(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle andIndex:(int)aBikeIndex;
 -(void)enableDisclosure;
 -(void)hideDisclosure;
 @end

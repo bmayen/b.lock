@@ -18,7 +18,7 @@
 //@synthesize posts = _posts;
 @synthesize showDisclosure = _showDisclosure;
 
--(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle {
+-(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle andIndex:(int)aBikeIndex {
     self = [super init];
     if(nil != self) {
 //        self.posts = aPosts;
@@ -33,8 +33,7 @@
                             [NSArray arrayWithObjects: [NSNumber numberWithDouble:40.71206913039633], [NSNumber numberWithDouble: -73.96425247192383], nil],
                             nil];
         
-        NSUInteger randomIndex = arc4random() % [fakeset count];
-        NSArray* fakeCoords = [fakeset objectAtIndex:randomIndex];
+        NSArray* fakeCoords = [fakeset objectAtIndex:aBikeIndex];
         
         self.coordinate = CLLocationCoordinate2DMake( [[fakeCoords objectAtIndex:0] doubleValue], [[fakeCoords objectAtIndex:1] doubleValue]);
     }
