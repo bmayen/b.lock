@@ -6,24 +6,23 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FABusinessAnnotation.h"
+#import "BLKBikeAnnotation.h"
 //#import "Businesses.h"
 //#import "Posts.h"
 
 
-@implementation FABusinessAnnotation
+@implementation BLKBikeAnnotation
 @synthesize coordinate = _coordinate;
 @synthesize title = _title;
 @synthesize subtitle = _subtitle;
 //@synthesize posts = _posts;
 @synthesize showDisclosure = _showDisclosure;
-/*
--(id)initWithPosts:(Posts*)aPosts {
+
+-(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle {
     self = [super init];
     if(nil != self) {
-        
-        self.posts = aPosts;
-        self.title = self.posts.businessEntity.name;
+//        self.posts = aPosts;
+        self.title = @"Bike ID: AJ023";
         [self enableDisclosure];
         
         // TODO: DATASOURCE    
@@ -42,7 +41,6 @@
     
     return self;
 }
- */
 - (void)dealloc {
     self.title = nil;
 //    self.posts = nil;

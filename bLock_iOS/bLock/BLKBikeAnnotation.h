@@ -12,7 +12,7 @@
 
 //@class Posts;
 
-@interface FABusinessAnnotation : NSObject <MKAnnotation> {
+@interface BLKBikeAnnotation : NSObject <MKAnnotation> {
     CLLocationCoordinate2D _coordinate;
     NSString* _title;
     NSString* _subtitle;
@@ -29,6 +29,7 @@
 
 // Designated initalizer
 //-(id)initWithPosts:(Posts*)aPosts;
+-(id)initWithTitle:(NSString*)aTitle andSubtitle:(NSString*)aSubtitle;
 -(void)enableDisclosure;
 -(void)hideDisclosure;
 @end

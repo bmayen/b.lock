@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
-#import "FABusinessAnnotation.h"
+#import "BLKBikeAnnotation.h"
 
 
 @interface FAFeedViewMapController : NSObject <MKMapViewDelegate> {
@@ -53,6 +53,6 @@
 #pragma mark -
 #pragma mark FAFeedViewMapControllerDelegate
 @protocol FAFeedViewMapControllerDelegate <NSObject>
-- (void)mapController:(FAFeedViewMapController *)mapController didSelectBusinessAnnotation:(FABusinessAnnotation *)businessAnnotation;
+- (void)mapController:(FAFeedViewMapController *)mapController didSelectBusinessAnnotation:(BLKBikeAnnotation *)businessAnnotation;
 @end
 

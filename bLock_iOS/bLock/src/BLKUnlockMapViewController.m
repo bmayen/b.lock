@@ -83,7 +83,12 @@
 //        [self.mapviewController setAllowScroll:YES andAllowZoom:YES];
         [self.mapviewController setMapSizeWidth:3300 andHeight:3300];
         [self.mapviewController setPinDelta:CGPointMake(0.003, -0.002)];
-//        [self.mapviewController_ addAnnotation:self.businessAnnotation andShouldPreselect:YES withDisclosure:NO];
+
+        // TODO: FAKE DATA
+//        for(int i = 0; i < 4; ++i) {
+            BLKBikeAnnotation* aBikeAnnotation = [[BLKBikeAnnotation alloc] initWithTitle:@"Abike" andSubtitle: @"Here"];
+            [self.mapviewController addAnnotation: aBikeAnnotation andShouldPreselect:YES withSubtitle:@"View Details" withDisclosure:YES];
+//        }
     }
 }
 

@@ -94,7 +94,7 @@
 		ED88EE661552F59D00D932B1 /* BLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88EE651552F59D00D932B1 /* BLKViewController.m */; };
 		ED88EE7315530AE900D932B1 /* filters-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = ED88EE7115530AE900D932B1 /* filters-bg.png */; };
 		ED88EE7415530AE900D932B1 /* filters-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED88EE7215530AE900D932B1 /* filters-bg@2x.png */; };
-		ED88EE7B15530C6C00D932B1 /* FABusinessAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88EE7A15530C6C00D932B1 /* FABusinessAnnotation.m */; };
+		ED88EE7B15530C6C00D932B1 /* BLKBikeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88EE7A15530C6C00D932B1 /* BLKBikeAnnotation.m */; };
 		ED88EE7E15530CAC00D932B1 /* FAFeedViewMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88EE7D15530CAC00D932B1 /* FAFeedViewMapController.m */; };
 		ED88EE8015530CDE00D932B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88EE7F15530CDD00D932B1 /* MapKit.framework */; };
 		ED88EE8215530CEB00D932B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88EE8115530CEB00D932B1 /* CoreLocation.framework */; };
@@ -234,8 +234,8 @@
 		ED88EE651552F59D00D932B1 /* BLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLKViewController.m; sourceTree = "<group>"; };
 		ED88EE7115530AE900D932B1 /* filters-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filters-bg.png"; sourceTree = "<group>"; };
 		ED88EE7215530AE900D932B1 /* filters-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filters-bg@2x.png"; sourceTree = "<group>"; };
-		ED88EE7915530C6C00D932B1 /* FABusinessAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FABusinessAnnotation.h; sourceTree = "<group>"; };
-		ED88EE7A15530C6C00D932B1 /* FABusinessAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FABusinessAnnotation.m; sourceTree = "<group>"; };
+		ED88EE7915530C6C00D932B1 /* BLKBikeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKBikeAnnotation.h; sourceTree = "<group>"; };
+		ED88EE7A15530C6C00D932B1 /* BLKBikeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLKBikeAnnotation.m; sourceTree = "<group>"; };
 		ED88EE7C15530CAC00D932B1 /* FAFeedViewMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAFeedViewMapController.h; sourceTree = "<group>"; };
 		ED88EE7D15530CAC00D932B1 /* FAFeedViewMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAFeedViewMapController.m; sourceTree = "<group>"; };
 		ED88EE7F15530CDD00D932B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -513,8 +513,8 @@
 			children = (
 				ED88EE7C15530CAC00D932B1 /* FAFeedViewMapController.h */,
 				ED88EE7D15530CAC00D932B1 /* FAFeedViewMapController.m */,
-				ED88EE7915530C6C00D932B1 /* FABusinessAnnotation.h */,
-				ED88EE7A15530C6C00D932B1 /* FABusinessAnnotation.m */,
+				ED88EE7915530C6C00D932B1 /* BLKBikeAnnotation.h */,
+				ED88EE7A15530C6C00D932B1 /* BLKBikeAnnotation.m */,
 			);
 			name = map;
 			sourceTree = "<group>";
@@ -664,7 +664,7 @@
 				ED88EE5C1552F59D00D932B1 /* main.m in Sources */,
 				ED88EE601552F59D00D932B1 /* BLKAppDelegate.m in Sources */,
 				ED88EE661552F59D00D932B1 /* BLKViewController.m in Sources */,
-				ED88EE7B15530C6C00D932B1 /* FABusinessAnnotation.m in Sources */,
+				ED88EE7B15530C6C00D932B1 /* BLKBikeAnnotation.m in Sources */,
 				ED88EE7E15530CAC00D932B1 /* FAFeedViewMapController.m in Sources */,
 				ED88EE9115530F1F00D932B1 /* BLKUnlockMapViewController.m in Sources */,
 				ED3F3542155332BF0036E096 /* BLKTimeLeftViewController.m in Sources */,

@@ -142,8 +142,8 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                     unlock_code: '1eju2ewj45jfj3',
                     location: {
                         epicenter: {
-                            lat: 70.759136,
-                            long: -103.990262
+                            lat: 40.735226248609976,
+                            long: -73.99094581604004
                         },
                         radius: 1000
                     },
@@ -159,8 +159,8 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                     unlock_code: '1eju2ewj45jfj3',
                     location: {
                         epicenter: {
-                            lat: 60.759136,
-                            long: -93.990262
+                            lat: 40.76520144280567,
+                            long: -73.97953033447266
                         },
                         radius: 1000
                     },
@@ -176,8 +176,8 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                     unlock_code: '1eju2ewj45jfj3',
                     location: {
                         epicenter: {
-                            lat: 50.759136,
-                            long: -83.990262
+                            lat: 40.72501469240076,
+                            long: -73.98141860961914
                         },
                         radius: 1000
                     },
@@ -193,8 +193,8 @@ YUI.add('RiderModelFoo', function(Y, NAME) {
                     unlock_code: '1eju2ewj45jfj3',
                     location: {
                         epicenter: {
-                            lat: 60.759136,
-                            long: -93.990262
+                            lat: 40.71206913039633,
+                            long: -73.96425247192383
                         },
                         radius: 1000
                     },

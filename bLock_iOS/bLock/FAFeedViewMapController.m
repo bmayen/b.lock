@@ -21,8 +21,8 @@
     self = [super init];
     if (self) {
         self.mapView = aMapView;
-        [self setMapSizeWidth:2100 andHeight:2100];
-        [self setPinDelta:CGPointMake(0.0016, 0.0008)];
+        [self setMapSizeWidth:3000 andHeight:3000];
+        [self setPinDelta:CGPointMake(10, 2.002)];
         [self.mapView setDelegate: self];
         [self.mapView setOpaque:YES];
     }
@@ -43,7 +43,7 @@
 }
 
 -(void)setMapSizeWidth:(int)aWidth andHeight:(int)aHeight {
-    mapSize = MKMapSizeMake(aWidth, aHeight);
+    mapSize = MKMapSizeMake(aWidth + 1000, aHeight+1000);
 }
 
 -(void)setPinDelta:(CGPoint)aDelta {
@@ -101,10 +101,10 @@
     
     
     for(MKAnnotationView *view in annotationViews) {        
-        
         if(view.annotation == self.selectedAnnotation) {
             [view setCanShowCallout:YES];
-            
+            view.image = [UIImage imageNamed:[NSString stringWithFormat:@"map_smTag.png"]];
+
 
             // Has a showDisclosure method
             if( [view.annotation respondsToSelector:@selector(showDisclosure)] 
@@ -120,16 +120,16 @@
         CGRect endFrame = view.frame;
         CGRect startFrame = endFrame;
         startFrame.origin.x = view.center.x;
-        startFrame.origin.y -= endFrame.size.height*3;
+        startFrame.origin.y += 10;
         startFrame.size.width = 0;
         startFrame.size.height = 0;
-        view.frame = startFrame;
+//        view.frame = startFrame;
         
         [UIView beginAnimations: nil context: nil];
-        [UIView setAnimationDuration: 0.25];
+        [UIView setAnimationDuration: 0.1];
 //        [UIView setAnimationDelay:0.4];
-        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            view.frame = endFrame;
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+//            view.frame = endFrame;
         [UIView commitAnimations];
         
 
@@ -143,7 +143,7 @@
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    FABusinessAnnotation* businessAnnotation = (FABusinessAnnotation *)view.annotation;
+    BLKBikeAnnotation* businessAnnotation = (BLKBikeAnnotation *)view.annotation;
     [self.delegate mapController:self didSelectBusinessAnnotation: businessAnnotation ];
 }
 
