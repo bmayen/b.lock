@@ -136,13 +136,13 @@ YUI.add('Rider', function(Y, NAME) {
          */
         getActiveBike: function(ac) {
             var self = this;
-            var id = ac.params.getFromRoute().id;
-            ac.models.RiderModelFoo.getBike( id, function(){ 
-                ac.done( 'true' );
-            });
+            var user_id = ac.params.getFromRoute().id;
+            var bike_id = ac.models.RiderModelFoo.getActiveBike( user_id );
+            ac.done( String( bike_id ) );
         },
 
 	    reserve: function(ac) {
+            debugger;
 		    var self = this;
             var id = ac.params.getFromRoute().id;
             ac.models.RiderModelFoo.reserve( id, false );
