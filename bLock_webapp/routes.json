@@ -61,6 +61,12 @@
       "call": "lender.index"
     },
 
+	"lender bikeRegister": {
+      "verbs": ["get"],
+      "path": "/lender/bike-register",
+      "call": "lender.bikeRegister"
+    },
+
 	"lender bikeStats": {
       "verbs": ["get"],
       "path": "/lender/bike-stats",

@@ -32,15 +32,15 @@
 				</thead>
 			</table>
 			{{#bikes}}
-			<a href="#">
+			<a href="/rider/bike-profile">
 				<table>
 					<tr>
-						<td class="count">0</td>
+						<td class="count">{{id}}</td>
 						<td class="bike-id">Bike {{id}}</td>
 						<td class="location">Location</td>
-						<td class="trip-type">Rating</td>
-						<td class="rating">Rating</td>
-						<td class="indicator"></td>
+						<td class="trip-type">{{trip_type}}</td>
+						<td class="rating">* * * *</td>
+						<td class="indicator"><img src="/static/bLock_webapp/assets/indicator.png"></td>
 					</tr>
 				</table>
 			</a>

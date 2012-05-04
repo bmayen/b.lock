@@ -36,17 +36,6 @@ YUI.add('Rider', function(Y, NAME) {
 
 	            ac.params.params.body.navClass = 'test data';
 
-   	            /*
-	            var bikes = [];
-
-                Y.each(ac.config.getDefinition('feeds'), function(feed, id) {
-                    feed.link = 'read.html?id=' + encodeURIComponent(id);
-                    vudata.tiles.push(feed);
-                });
-                */
-
-	            console.log("*************************", bikes);
-
                 ac.composite.done({
                     template: {
 	                    ns_class: "rider index",
