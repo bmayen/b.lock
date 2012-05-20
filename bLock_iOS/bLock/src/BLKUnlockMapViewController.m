@@ -56,7 +56,7 @@
 	[asiHttpRequest setDidFinishSelector:@selector(requestFinished:)];
 	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
     [asiHttpRequest setUseCookiePersistence:YES];
-    [asiHttpRequest startSynchronous];
+    [asiHttpRequest startAsynchronous];
     
     self.navigationController.navigationBar.hidden = YES;
     [self setupMap];

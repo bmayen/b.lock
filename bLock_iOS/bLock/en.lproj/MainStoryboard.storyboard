@@ -168,10 +168,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="time_bkgd.png" id="xHj-Ap-VSh">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="McJ-eT-BRY">
                                 <rect key="frame" x="31" y="380" width="258" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,10 +203,10 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="01:02:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontSizeToFit="NO" id="wLr-2u-JYx">
                                 <rect key="frame" x="0.0" y="62" width="320" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="64"/>
                                 <color key="textColor" red="1" green="0.18039215689999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="-1" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dat-OC-rhY">
@@ -262,7 +258,6 @@
         <image name="map_btn2.png" width="258" height="70"/>
         <image name="map_btn3.png" width="258" height="70"/>
         <image name="map_orngBar.png" width="320" height="3"/>
-        <image name="time_bkgd.png" width="320" height="480"/>
         <image name="time_btn1-tap.png" width="258" height="70"/>
         <image name="time_btn1.png" width="258" height="70"/>
         <image name="time_btn2-tap.png" width="258" height="70"/>
