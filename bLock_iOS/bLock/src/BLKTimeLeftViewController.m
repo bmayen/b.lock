@@ -7,6 +7,7 @@
 //
 
 #import "BLKTimeLeftViewController.h"
+#import "BLKUrlModel.h"
 
 @interface BLKTimeLeftViewController ()
 @end
@@ -52,8 +53,11 @@
     
     // Toggle
     NSString* urlString = NULL;
-    if ( isLocked ) urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/true";
-    else urlString = @"http://192.168.43.144:8666/rider/lock-value/set/1/false";
+    
+    
+
+    if ( isLocked ) urlString = [[BLKUrlModel sharedInstance] getURLForPath:@"rider/lock-value/set/1/true"];
+    else urlString = [[BLKUrlModel sharedInstance] getURLForPath:@"rider/lock-value/set/1/false"];
     
     [self setAsiHttpRequest: [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]]];
 	[asiHttpRequest setUseKeychainPersistence: YES];

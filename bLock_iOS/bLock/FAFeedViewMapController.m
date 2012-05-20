@@ -8,7 +8,6 @@
 
 #import "FAFeedViewMapController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "Constants.h"
 
 @implementation FAFeedViewMapController
 @synthesize mapView=_mapView;

@@ -104,6 +104,7 @@
 		ED88EE8A15530D0F00D932B1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88EE8915530D0F00D932B1 /* MobileCoreServices.framework */; };
 		ED88EE8C15530D1A00D932B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88EE8B15530D1A00D932B1 /* SystemConfiguration.framework */; };
 		ED88EE9115530F1F00D932B1 /* BLKUnlockMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88EE9015530F1E00D932B1 /* BLKUnlockMapViewController.m */; };
+		EDEF9E2E1569B63400C1D181 /* BLKUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDEF9E2D1569B63400C1D181 /* BLKUrlModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +248,8 @@
 		ED88EE8B15530D1A00D932B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED88EE8F15530F1E00D932B1 /* BLKUnlockMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLKUnlockMapViewController.h; path = src/BLKUnlockMapViewController.h; sourceTree = "<group>"; };
 		ED88EE9015530F1E00D932B1 /* BLKUnlockMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLKUnlockMapViewController.m; path = src/BLKUnlockMapViewController.m; sourceTree = "<group>"; };
+		EDEF9E2C1569B63400C1D181 /* BLKUrlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLKUrlModel.h; path = src/BLKUrlModel.h; sourceTree = "<group>"; };
+		EDEF9E2D1569B63400C1D181 /* BLKUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLKUrlModel.m; path = src/BLKUrlModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +526,8 @@
 			isa = PBXGroup;
 			children = (
 				ED3F3544155333950036E096 /* Constants.h */,
+				EDEF9E2C1569B63400C1D181 /* BLKUrlModel.h */,
+				EDEF9E2D1569B63400C1D181 /* BLKUrlModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 				ED0FC91A1553D1DE00E6DF2D /* SBJsonBase.m in Sources */,
 				ED0FC91B1553D1DE00E6DF2D /* SBJsonParser.m in Sources */,
 				ED0FC91C1553D1DE00E6DF2D /* SBJsonWriter.m in Sources */,
+				EDEF9E2E1569B63400C1D181 /* BLKUrlModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

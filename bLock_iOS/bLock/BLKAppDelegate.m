@@ -7,6 +7,7 @@
 //
 
 #import "BLKAppDelegate.h"
+#import "BLKUrlModel.h"
 
 @implementation BLKAppDelegate
 
@@ -15,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%@", [[BLKUrlModel sharedInstance] getURLForPath:@"ABC"]);
     return YES;
 }
 							
@@ -57,5 +59,7 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+
 
 @end

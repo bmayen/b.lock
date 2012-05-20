@@ -7,9 +7,7 @@
 //
 
 #import "BLKUnlockMapViewController.h"
-
-
-
+#import "BLKUrlModel.h"
 
 @implementation BLKUnlockMapViewController
 @synthesize unlockButton;
@@ -47,7 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString* urlString = @"http://192.168.43.144:8666/rider/0/get-active-bike";
+    NSString* urlString = [[BLKUrlModel sharedInstance] getURLForPath:@"rider/0/get-active-bike"];
     ASIFormDataRequest* asiHttpRequest = [ASIFormDataRequest requestWithURL:[NSURL URLWithString: urlString ]];
 	[asiHttpRequest setUseKeychainPersistence: YES];
 	[asiHttpRequest setDelegate:self];
@@ -56,7 +54,7 @@
 	[asiHttpRequest setDidFinishSelector:@selector(requestFinished:)];
 	[asiHttpRequest setDidFailSelector:@selector(requestFailed:)];
     [asiHttpRequest setUseCookiePersistence:YES];
-    [asiHttpRequest startAsynchronous];
+//    [asiHttpRequest startAsynchronous];
     
     self.navigationController.navigationBar.hidden = YES;
     [self setupMap];
