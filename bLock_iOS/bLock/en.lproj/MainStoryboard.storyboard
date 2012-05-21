@@ -168,6 +168,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="time_bkgd.png" id="HRt-iS-Hzh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="McJ-eT-BRY">
                                 <rect key="frame" x="31" y="380" width="258" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,6 +262,7 @@
         <image name="map_btn2.png" width="258" height="70"/>
         <image name="map_btn3.png" width="258" height="70"/>
         <image name="map_orngBar.png" width="320" height="3"/>
+        <image name="time_bkgd.png" width="320" height="480"/>
         <image name="time_btn1-tap.png" width="258" height="70"/>
         <image name="time_btn1.png" width="258" height="70"/>
         <image name="time_btn2-tap.png" width="258" height="70"/>
